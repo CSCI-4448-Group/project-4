@@ -26,7 +26,7 @@ class NorthGuitarKitFactory implements GuitarKitFactory {
         } else if (type == 2) {
             return new BridgeB();
         } else if (type == 3) {
-            return new BridgeD();
+            return new BridgeC();
         }
         return () -> 0;
     }
@@ -37,7 +37,7 @@ class NorthGuitarKitFactory implements GuitarKitFactory {
         } else if (type == 2) {
             return new KnobsetB();
         } else if (type == 3) {
-            return new KnobsetD();
+            return new KnobsetC();
         }
         return () -> 0;
     }
@@ -48,7 +48,7 @@ class NorthGuitarKitFactory implements GuitarKitFactory {
         } else if(type==2){
             return new CoverB();
         } else if(type==3){
-            return new CoverD();
+            return new CoverC();
         }
         return () -> 0;
     }
@@ -59,7 +59,7 @@ class NorthGuitarKitFactory implements GuitarKitFactory {
         } else if(type == 2){
             return new NeckB();
         } else if(type == 3){
-            return new NeckD();
+            return new NeckC();
         }
         return () -> 0;
     }
@@ -70,7 +70,7 @@ class NorthGuitarKitFactory implements GuitarKitFactory {
         } else if(type == 2){
             return new PickguardB();
         } else if(type == 3){
-            return new PickguardD();
+            return new PickguardC();
         }
         return () -> 0;
     }
@@ -81,7 +81,7 @@ class NorthGuitarKitFactory implements GuitarKitFactory {
         } else if(type == 2){
             return new PickupB();
         } else if(type == 3){
-            return new PickupD();
+            return new PickupC();
         }
         return () -> 0;
     }
