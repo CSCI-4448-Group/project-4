@@ -4,13 +4,22 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Tracker implements Observer {
+    // Singleton instance of tracker
+    private static Tracker trackerInstance = null;
     private HashMap<String, ArrayList<Integer>> trackerMap_ = new HashMap<>(); // Define data structure to store relevant clerk information
     private Calendar calendar; // Calendar attribute for tracking
 
     // Constructor for Tracker
-    public Tracker(Store s)
-    {
+    private Tracker(Store s) {
         calendar = s.get_calendar();
+    }
+
+    public static synchronized Tracker getInstance(Store s) {
+        if (trackerInstance == null)
+        {
+            trackerInstance = new Tracker(s);
+        }
+        return trackerInstance;
     }
 
     // Register Tracker as observer of subject clerk
