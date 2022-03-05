@@ -37,12 +37,11 @@ public class UserCustomer {
 
             switch(choice) {
                 case 1: 
-                    invoker_.set_store_slot(new selectStoreCommand(receiver_));
-                    invoker_.press_store();
-
+                    invoker_.set_slot(new selectStoreCommand(receiver_));
+                    invoker_.press_button();
                 case 2:
-                    invoker_.set_store_slot(new buyGuitarKitCommand());
-                    invoker_.press_store();
+                    invoker_.set_slot(new buyGuitarKitCommand());
+                    invoker_.press_button();
             }
 
         }
