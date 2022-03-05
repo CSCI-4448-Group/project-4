@@ -1,7 +1,5 @@
 import java.util.Scanner;
 
-import javax.sound.midi.Receiver;
-
 public class UserCustomer {
     private Invoker invoker_;
     private Clerk receiver_;
