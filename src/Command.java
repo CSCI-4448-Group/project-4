@@ -1,4 +1,8 @@
 import java.util.Scanner;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Random;
 
 public abstract class Command {
     private Clerk receiver_;
@@ -34,7 +38,56 @@ class selectStoreCommand extends Command {
 }
 
 class buyGuitarKitCommand extends Command {
+    public buyGuitarKitCommand(Clerk receiver) {
+        set_receiver(receiver);
+    }
     public void execute() {
-        
+        // receiver_.buy_guitar_kit();
+    }
+}
+
+class printClerkNameCommand extends Command {
+    public printClerkNameCommand(Clerk receiver) {
+        set_receiver(receiver);
+    }
+    public void execute() {
+        System.out.println("The clerk's name is " + get_receiver().get_name());
+    }
+}
+
+class getCurrentTimeCommand extends Command {
+    public getCurrentTimeCommand(Clerk receiver) {
+        set_receiver(receiver);
+    }
+    public void execute() {
+        // Used from https://stackabuse.com/how-to-get-current-date-and-time-in-java/
+        SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+        System.out.println("The current time is " + formatter.format(Calendar.getInstance().getTime()));
+    }
+}
+
+class sellItemCommand extends Command {
+    public sellItemCommand(Clerk receiver) {
+        set_receiver(receiver);
+    }
+    public void execute() {
+        Random rand = new Random();
+        ArrayList<String> types = Inventory.get_item_types();
+        String type = types.get(rand.nextInt(types.size()));
+        try {
+            Item item = Item.generate_item(type);
+            // receiver_.sell_user_item(item);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+class buyItemCommand extends Command {
+    public buyItemCommand(Clerk receiver) {
+        set_receiver(receiver);
+    }
+    public void execute() {
+        // receiver_.buy_user_item();
     }
 }

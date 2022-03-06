@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class UserCustomer {
     private Invoker invoker_;
     private Clerk receiver_;
+    
     public UserCustomer(Clerk receiver, Invoker invoker) {
         invoker_ = invoker;
         receiver_ = receiver;
@@ -26,25 +27,42 @@ public class UserCustomer {
         while (running) {
             print_options();
             int choice = 0;
-            while (choice < 1 || choice > 7) {
+            while (choice < 0 || choice > 7) {
                 try {
                     choice = reader.nextInt();
                 } catch (Exception e) {
-                    System.out.println("Must enter a number 1-7.");
+                    System.out.println("Must enter a number 1-7, or 0 to print the options again.");
                 }
             }
             reader.close();
 
             switch(choice) {
+                case 0:
+                    print_options();
                 case 1: 
                     invoker_.set_slot(new selectStoreCommand(receiver_));
                     invoker_.press_button();
                 case 2:
-                    invoker_.set_slot(new buyGuitarKitCommand());
+                    invoker_.set_slot(new buyGuitarKitCommand(receiver_));
                     invoker_.press_button();
+                case 3:
+                    invoker_.set_slot(new printClerkNameCommand(receiver_));
+                    invoker_.press_button();
+                case 4: 
+                    invoker_.set_slot(new getCurrentTimeCommand(receiver_));
+                    invoker_.press_button();
+                case 5: 
+                    invoker_.set_slot(new sellItemCommand(receiver_));
+                    invoker_.press_button();
+                case 6: 
+                    invoker_.set_slot(new buyItemCommand(receiver_));
+                    invoker_.press_button();
+                case 7: 
+                    System.out.println("You left the store");
+                    running = false;
+                default:
+                    System.out.println("There is an error in the logic, " + choice + " should not be possible.");
             }
-
         }
-
     }
 }
