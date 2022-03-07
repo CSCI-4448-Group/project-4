@@ -5,14 +5,22 @@ import java.io.IOException;  // Import the IOException class to handle errors
 
 
 public class Logger implements Observer {
+    // Singleton instance of tracker
+    private static Logger loggerInstance = new Logger();
     private String announcement_; // Logger has an announcement String attribute (used to store incoming announcement
     private int currDay; // Track the current day
 
     // Construct the Logger by registering it as an observer of clerk and getting the current day
-    public Logger(Store s, Subject clerk)
+    private Logger() {}
+
+    public void Logger_set(Store s, Subject clerk)
     {
         clerk.registerObserver(this);
         currDay = s.get_calendar().get_current_day();
+    }
+
+    public static synchronized Logger getInstance() {
+        return loggerInstance;
     }
 
     //https://www.w3schools.com/java/java_files_create.asp
