@@ -96,6 +96,6 @@ class buyItemCommand extends Command {
         set_receiver(receiver);
     }
     public void execute(Scanner reader) {
-        // receiver_.buy_user_item();
+        get_receiver().buy_user_item(reader);
     }
 }

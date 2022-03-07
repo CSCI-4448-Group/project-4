@@ -314,11 +314,15 @@ public class Clerk extends Employee implements Subject {
         return 0;
     }
 
-    private boolean user_input(Scanner reader, Double price) {
+    private boolean user_input(Scanner reader, Double price, boolean selling) {
         String choice = "";
         while (!choice.equals("y") && !choice.equals("n")) {
             try {
-                System.out.println("Will you accept an offer of " + String.format("%.2f",price) + " for your item?");
+                if (selling) {
+                    System.out.println("Will you accept an offer of " + String.format("%.2f",price) + " for your item?");
+                } else {
+                    System.out.println("Will you buy this item for " + String.format("%.2f",price) + "?");
+                }
                 choice = reader.nextLine();
                 if (!choice.equals("y") && !choice.equals("n")) {
                     System.out.println("You must enter 'y' for yes, or 'n' for no.");
@@ -337,19 +341,41 @@ public class Clerk extends Employee implements Subject {
             return false;
         }
         System.out.println("You want to sell your " + toBuyItem.get_name() + " to " + get_name() + ".");
-        if(user_input(reader, purchPrice)){
+        if(user_input(reader, purchPrice, true)){
             System.out.println(get_name() + " bought a " + toBuyItem.get_condition().get_condition() + " condition " + toBuyItem.get_new_or_used() + " " + toBuyItem.get_name() + " from you for $" + String.format("%.2f",purchPrice));
             purch_item(toBuyItem,purchPrice);
             return true;
         }
-        else if (user_input(reader, purchPrice*1.1)) {
+        else if (user_input(reader, purchPrice*1.1, true)) {
             System.out.println(get_name() + " bought a " + toBuyItem.get_condition().get_condition() + " condition " + toBuyItem.get_new_or_used() + " " + toBuyItem.get_name() + " from you for $" + String.format("%.2f",purchPrice*1.1) + " after a 10% offer increase.");
             purch_item(toBuyItem, purchPrice*1.1);
             return true;
         }
         else{
-            System.out.println(get_name() + " tried buying a " + toBuyItem.get_condition().get_condition() + " condition " + toBuyItem.get_new_or_used() + " " + toBuyItem.get_name() + " from you for $" + String.format("%.2f",purchPrice*1.1) + " but customer refused.");
+            System.out.println(get_name() + " tried buying a " + toBuyItem.get_condition().get_condition() + " condition " + toBuyItem.get_new_or_used() + " " + toBuyItem.get_name() + " from you for $" + String.format("%.2f",purchPrice*1.1) + " but you refused.");
             return false;
+        }
+    }
+
+    public void buy_user_item(Scanner reader) {
+        ArrayList<String> item_types = Inventory.get_item_types();
+        Random rand = new Random();
+
+         // Gets a random type of item from list
+        String wantedType_ = item_types.get(rand.nextInt(item_types.size()));
+        Item toSellItem = get_store().get_inventory().get_items_of_type(wantedType_).get(0);
+        Double price = evaluate_item(toSellItem);
+        System.out.println("You want to buy this " + toSellItem.get_name() + " from " + get_name() + ".");
+        if (user_input(reader, price, false)){ //If we roll 50% chance and win, sell full price
+            sell_item(toSellItem, toSellItem.get_list_price());
+            System.out.println(get_name() + " sold a " + toSellItem.get_name() + " to you for $" + String.format("%.2f",toSellItem.get_sale_price()));
+        }
+        else if(user_input(reader, price*.9, false)){ //else if we roll 75% chance and win, sell 90% full price
+            sell_item(toSellItem, toSellItem.get_list_price()*.9);
+            System.out.println(get_name() + " sold a " + toSellItem.get_name() + " to you for $" + String.format("%.2f",toSellItem.get_sale_price()) + " after a 10% discount.");
+        }
+        else{
+            System.out.println(get_name() + " tried selling a " + toSellItem.get_condition().get_condition() + " condition " + toSellItem.get_new_or_used() + " " + toSellItem.get_name() + " to you for $" + String.format("%.2f",toSellItem.get_list_price()) + " but you refused.");
         }
     }
 
