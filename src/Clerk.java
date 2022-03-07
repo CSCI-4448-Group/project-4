@@ -43,6 +43,8 @@ public class Clerk extends Employee implements Subject {
         tuneBehavior_ = tuneBehavior;
     }
 
+    public TuneBehavior get_tune_behavior() { return tuneBehavior_; }
+
     public void perform_tune(Item item){
         tuneBehavior_.tune(item);
     }
@@ -90,7 +92,7 @@ public class Clerk extends Employee implements Subject {
         notifyObservers("logger: " + " (" + s.get_name() + ") " + announcement_);
         announcement_ = "";
 
-        if(currentAmount < 75) {
+        if (currentAmount < 75) {
             go_to_bank();
         }
     }
@@ -301,7 +303,7 @@ public class Clerk extends Employee implements Subject {
     }
 
     //If the item is a tunable type, and it is tuned, return a bonus chance of sale
-    int calc_bonus_chance(Item item){
+    public int calc_bonus_chance(Item item){
         if(item instanceof Players && item.get_tuned()){
             return 10;
         }
