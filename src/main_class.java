@@ -89,8 +89,8 @@ class main_class {
 
         // Initialize store and two clerk objects
         EmployeePool empPool = EmployeePool.getInstance();
-        Store FNMSNorth = new Store("FNMSNorth");
-        Store FNMSSouth = new Store("FNMSSouth");
+        Store FNMSNorth = new Store("FNMSNorth", new NorthGuitarKitFactory());
+        Store FNMSSouth = new Store("FNMSSouth", new SouthGuitarKitFactory());
 
         // Initialize list of stores
         ArrayList<Store> stores = new ArrayList<>();

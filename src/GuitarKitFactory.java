@@ -10,7 +10,6 @@ import java.util.ArrayList;
     //1.] Should I have a base interface called guitarKitPiece that is the root interface instead of Covers,Neck,Pickguard etc.
 
 public interface GuitarKitFactory {
-    //double createGuitarKit(ArrayList<Integer> itemtypes);
     Bridge createBridge(int type);
     Knobset createKnobset(int type);
     Covers createCovers(int type);
