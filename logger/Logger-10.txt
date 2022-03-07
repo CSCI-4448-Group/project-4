@@ -1,9 +1,20 @@
-Logger wrote: Velma arrives at the store on Day 10
-Logger wrote: 6 number of items arrived at the store on Day 10
-Logger wrote: Velma is checking the register and there is $1427.50
-Logger wrote: The total number of items in the inventory is 55
-Logger wrote: The sum of today's inventory is $1279.50
-Logger wrote: The total number of items damaged in tuning is 0
-Logger wrote: The total number of items sold by Velma on day 10 is 5
-Logger wrote: The total number of items bought by Velma on day 10 is 2
-Logger wrote: Velma locked up the store and went home for the day
+Logger wrote:  (FNMSNorth) Bill arrives at the store on Day 10
+Logger wrote:  (FNMSNorth) 3 number of items arrived at the store on Day 10
+Logger wrote:  (FNMSNorth) Bill is checking the register and there is $1037.70
+Logger wrote:  (FNMSNorth) The total number of items ordered is 3
+Logger wrote:  (FNMSNorth) The total number of items in the inventory is 68
+Logger wrote:  (FNMSNorth) The sum of today's inventory is $1628.50
+Logger wrote:  (FNMSNorth) The total number of items damaged in tuning is 1
+Logger wrote:  (FNMSNorth) The total number of items sold by Bill on day 10 is 5
+Logger wrote:  (FNMSNorth) The total number of items bought by Bill on day 10 is 1
+Logger wrote:  (FNMSNorth) Bill locked up the store and went home for the day
+Logger wrote:  (FNMSSouth) Fahad arrives at the store on Day 10
+Logger wrote:  (FNMSSouth) 3 number of items arrived at the store on Day 10
+Logger wrote:  (FNMSSouth) Fahad is checking the register and there is $1624.60
+Logger wrote:  (FNMSSouth) The total number of items ordered is 3
+Logger wrote:  (FNMSSouth) The total number of items in the inventory is 67
+Logger wrote:  (FNMSSouth) The sum of today's inventory is $1636.50
+Logger wrote:  (FNMSSouth) The total number of items damaged in tuning is 0
+Logger wrote:  (FNMSSouth) The total number of items sold by Fahad on day 10 is 5
+Logger wrote:  (FNMSSouth) The total number of items bought by Fahad on day 10 is 1
+Logger wrote:  (FNMSSouth) Fahad locked up the store and went home for the day
