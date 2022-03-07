@@ -69,7 +69,7 @@ class getCurrentTimeCommand extends Command {
     }
     public void execute(Scanner reader) {
         // Used from https://stackabuse.com/how-to-get-current-date-and-time-in-java/
-        SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+        SimpleDateFormat formatter = new SimpleDateFormat("HH:mm:ss");
         System.out.println("The current time is " + formatter.format(Calendar.getInstance().getTime()));
     }
 }

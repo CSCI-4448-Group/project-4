@@ -264,7 +264,7 @@ public class Clerk extends Employee implements Subject {
     public void open_store() throws Exception{
         int soldItemsCounter = 0;
         int boughtItemsCounter = 0;
-        if (get_store().get_calendar().get_current_day() == 15) {
+        if (get_store().get_calendar().get_current_day() == 10) {
             UserCustomer user = new UserCustomer(this, new Invoker());
             user.begin_options();
         } else {
@@ -364,7 +364,7 @@ public class Clerk extends Employee implements Subject {
          // Gets a random type of item from list
         String wantedType_ = item_types.get(rand.nextInt(item_types.size()));
         Item toSellItem = get_store().get_inventory().get_items_of_type(wantedType_).get(0);
-        Double price = evaluate_item(toSellItem);
+        Double price = toSellItem.get_list_price();
         System.out.println("You want to buy this " + toSellItem.get_name() + " from " + get_name() + ".");
         if (user_input(reader, price, false)){ //If we roll 50% chance and win, sell full price
             sell_item(toSellItem, toSellItem.get_list_price());
