@@ -13,14 +13,18 @@ public class Store {
     private CashRegister register_; // Cash register
     private Calendar calendar_; // Calendar
 
-    public Store(EmployeePool empPool) {
-        employees_ = empPool;
+    public Store() {
+        initializeEmployees();
         initializeInventory();
         initializeCalendar();
         initializeOrdered();
         initializeRegister();
         initializeSoldItems();
     } // Init the store with various initialize methods
+
+    public void initializeEmployees(){
+        employees_ = EmployeePool.getInstance();
+    }
 
     public void initializeInventory() {
         inventory_ = new Inventory();
