@@ -33,7 +33,7 @@ class main_class {
 
      public static void print_final_messages(Store fnms)
      {
-         System.out.println("Following a 30 day simulation, the following summary of the store's activities is printed below: ");
+         System.out.println("Following a 30 day simulation, the following summary of the " + fnms.get_name() + "'s activities is printed below: ");
          System.out.println();
 
          // Inventory print statement including items themselves and total value
@@ -73,7 +73,7 @@ class main_class {
          System.out.println("\n");
 
          // The final count of money in the cash register
-         // get_register returns a register object, get_ammount returns the amount as a double that's currently in the register
+         // get_register returns a register object, get_amount returns the amount as a double that's currently in the register
          System.out.println("The final amount of money in the cash register is: ");
          System.out.println("$" + Double.toString(fnms.get_register().get_amount()));
          System.out.println("\n");
@@ -89,8 +89,8 @@ class main_class {
 
         // Initialize store and two clerk objects
         EmployeePool empPool = EmployeePool.getInstance();
-        Store FNMSNorth = new Store();
-        Store FNMSSouth = new Store();
+        Store FNMSNorth = new Store("FNMSNorth");
+        Store FNMSSouth = new Store("FNMSSouth");
 
         // Initialize list of stores
         ArrayList<Store> stores = new ArrayList<>();

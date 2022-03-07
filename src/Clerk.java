@@ -55,7 +55,7 @@ public class Clerk extends Employee implements Subject {
 
         // Observer pattern for logger
         announcement_ = incoming.size() + " number of items arrived at the store on Day " + currDay;
-        notifyObservers("logger: " + announcement_);
+        notifyObservers("logger: " + " (" + s.get_name() + ") " + announcement_);
         announcement_ = "";
 
         s.get_inventory().put_items(incoming); //Add all the items to the inventory
@@ -64,12 +64,13 @@ public class Clerk extends Employee implements Subject {
 
     //Arrive at store and check if items need to be processed
     public void arrive_at_store(){
+        Store s = get_store();
         int currDay = get_store().get_calendar().get_current_day();
         System.out.println(get_name() + " arrives at the store on Day " + currDay);
 
         // Observer pattern for logger
         announcement_ = get_name() + " arrives at the store on Day " + currDay;
-        notifyObservers("logger: " + announcement_);
+        notifyObservers("logger: " + " (" + s.get_name() + ") " + announcement_);
         announcement_ = "";
 
         if(get_store().get_ordered().containsKey(currDay)){ //If there are ordered items that arrive today
@@ -80,12 +81,13 @@ public class Clerk extends Employee implements Subject {
 
     //Check amount in register, go_to_bank if less than 75 (REMOVE MAGIC NUMBERS)
     public void check_register(){
+        Store s = get_store();
         double currentAmount = get_store().get_register().get_amount();
         System.out.println(get_name() + " is checking the register and there is $" + String.format("%.2f",currentAmount));
 
         // Observer pattern for logger
         announcement_ = get_name() + " is checking the register and there is $" + String.format("%.2f",currentAmount);
-        notifyObservers("logger: " + announcement_);
+        notifyObservers("logger: " + " (" + s.get_name() + ") " + announcement_);
         announcement_ = "";
 
         if(currentAmount < 75) {
@@ -95,6 +97,7 @@ public class Clerk extends Employee implements Subject {
 
     //Go to the bank, withdrawal 1000 dollars, add it to the register, tally the withdrawal (REMOVE MAGIC NUMBERS)
     public void go_to_bank(){
+        Store s = get_store();
         CashRegister reg = get_store().get_register();
         reg.set_amount(reg.get_amount() + 1000);
         reg.set_bank_withdrawal(reg.get_bank_withdrawals() + 1000);
@@ -102,7 +105,7 @@ public class Clerk extends Employee implements Subject {
 
         // Observer pattern for logger
         announcement_ = get_name() + " withdrew 1000 dollars from the bank and the new balance in the register is " + String.format("%.2f",reg.get_amount()) + " dollars";
-        notifyObservers("logger: " + announcement_);
+        notifyObservers("logger: " + " (" + s.get_name() + ") " + announcement_);
         announcement_ = "";
     }
 
@@ -133,17 +136,17 @@ public class Clerk extends Employee implements Subject {
 
         // Observer pattern for logger
         announcement_ = "The total number of items in the inventory is " + inv.flatten_inventory().size();
-        notifyObservers("logger: " + announcement_);
+        notifyObservers("logger: " + " (" + s.get_name() + ") " + announcement_);
         announcement_ = "";
 
         // Observer pattern for logger
         announcement_ = "The sum of today's inventory is $" + String.format("%.2f",inv.get_purch_price_sum());
-        notifyObservers("logger: " + announcement_);
+        notifyObservers("logger: " + " (" + s.get_name() + ") " + announcement_);
         announcement_ = "";
 
         // Observer pattern for logger
         announcement_ = "The total number of items damaged in tuning is " + tuneDamagedItems;
-        notifyObservers("logger: " + announcement_);
+        notifyObservers("logger: "+ " (" + s.get_name() + ") " + announcement_ );
         announcement_ = "";
     }
 
@@ -184,7 +187,7 @@ public class Clerk extends Employee implements Subject {
 
         // Observer pattern for logger
         announcement_ = "The total number of items ordered is " + items.size();
-        notifyObservers("logger: " + announcement_);
+        notifyObservers("logger: " + " (" + s.get_name() + ") " + announcement_);
         // Observer pattern for tracker with three items purchased
         notifyObservers("tracker: " + get_name() + ",0,3,0");
         announcement_ = "";
@@ -262,6 +265,7 @@ public class Clerk extends Employee implements Subject {
 
 
     public void open_store() throws Exception{
+        Store s = get_store();
         int soldItemsCounter = 0;
         int boughtItemsCounter = 0;
 
@@ -287,12 +291,12 @@ public class Clerk extends Employee implements Subject {
 
         // Observer pattern for logger
         announcement_ = "The total number of items sold by " + get_name() + " on day " + get_store().get_calendar().get_current_day() + " is " + soldItemsCounter;
-        notifyObservers("logger: " + announcement_);
+        notifyObservers("logger: " + " (" + s.get_name() + ") " + announcement_);
         announcement_ = "";
 
         // Observer pattern for logger
         announcement_ = "The total number of items bought by "+ get_name() + " on day " + get_store().get_calendar().get_current_day() + " is " + boughtItemsCounter;
-        notifyObservers("logger: " + announcement_);
+        notifyObservers("logger: " + " (" + s.get_name() + ") " + announcement_);
         announcement_ = "";
     }
 
@@ -416,6 +420,7 @@ public class Clerk extends Employee implements Subject {
     }
 
     public void clean_store() { //The size of this function needs to be reduced!
+        Store s = get_store();
         Random rand = new Random();
         String name = get_name();
         Inventory inv = get_store().get_inventory();
@@ -444,20 +449,21 @@ public class Clerk extends Employee implements Subject {
 
         // Observer pattern for logger
         announcement_ = "The total number of items damaged in cleaning is " + damagedCounter;
-        notifyObservers("logger: " + announcement_);
+        notifyObservers("logger: " + " (" + s.get_name() + ") " + announcement_);
         announcement_ = "";
     }
 
 
     // Pack up the store for the day. Increase days worked and increment current day. Announce that the store is closed
     public void leave_store(){
+        Store s = get_store();
         get_store().get_calendar().incr_current_day();
         incr_days_worked();
         System.out.println(get_name() + " locked up the store and went home for the day");
 
         // Observer pattern for logger
         announcement_ = get_name() + " locked up the store and went home for the day";
-        notifyObservers("logger: " + announcement_);
+        notifyObservers("logger: " + " (" + s.get_name() + ") " + announcement_);
         announcement_ = "";
 
         // Observer pattern for tracker (EOD print statement)

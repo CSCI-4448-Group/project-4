@@ -1,11 +1,19 @@
-Logger wrote: Daphne arrives at the store on Day 22
-Logger wrote: 9 number of items arrived at the store on Day 22
-Logger wrote: Daphne is checking the register and there is $2380.08
-Logger wrote: The total number of items ordered is 3
-Logger wrote: The total number of items in the inventory is 45
-Logger wrote: The sum of today's inventory is $1254.60
-Logger wrote: The total number of items damaged in tuning is 0
-Logger wrote: The total number of items sold by Daphne on day 22 is 4
-Logger wrote: The total number of items bought by Daphne on day 22 is 1
-Logger wrote: The total number of items damaged in cleaning is 4
-Logger wrote: Daphne locked up the store and went home for the day
+Logger wrote:  (FNMSNorth) Shaggy arrives at the store on Day 22
+Logger wrote:  (FNMSNorth) 6 number of items arrived at the store on Day 22
+Logger wrote:  (FNMSNorth) Shaggy is checking the register and there is $1823.38
+Logger wrote:  (FNMSNorth) The total number of items ordered is 3
+Logger wrote:  (FNMSNorth) The total number of items in the inventory is 69
+Logger wrote:  (FNMSNorth) The sum of today's inventory is $1888.60
+Logger wrote:  (FNMSNorth) The total number of items damaged in tuning is 1
+Logger wrote:  (FNMSNorth) The total number of items sold by Shaggy on day 22 is 1
+Logger wrote:  (FNMSNorth) The total number of items bought by Shaggy on day 22 is 3
+Logger wrote:  (FNMSNorth) Shaggy locked up the store and went home for the day
+Logger wrote:  (FNMSSouth) James arrives at the store on Day 22
+Logger wrote:  (FNMSSouth) 6 number of items arrived at the store on Day 22
+Logger wrote:  (FNMSSouth) James is checking the register and there is $2432.30
+Logger wrote:  (FNMSSouth) The total number of items in the inventory is 77
+Logger wrote:  (FNMSSouth) The sum of today's inventory is $2171.20
+Logger wrote:  (FNMSSouth) The total number of items damaged in tuning is 0
+Logger wrote:  (FNMSSouth) The total number of items sold by James on day 22 is 5
+Logger wrote:  (FNMSSouth) The total number of items bought by James on day 22 is 4
+Logger wrote:  (FNMSSouth) James locked up the store and went home for the day

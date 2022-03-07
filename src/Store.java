@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Random;
 
 public class Store {
+    private String name_;
     private Inventory inventory_; // Inventory, ////// Identity: Inventory is a mapping between subclass type to items and is different than other objects in the application //////
     private ArrayList<Item> soldItems_; // soldItems list
     private HashMap<Integer, ArrayList<Item>> orderedItems_; //map from (arrival day) -> (list of items arriving)
@@ -13,7 +14,8 @@ public class Store {
     private CashRegister register_; // Cash register
     private Calendar calendar_; // Calendar
 
-    public Store() {
+    public Store(String name) {
+        name_ = name;
         initializeEmployees();
         initializeInventory();
         initializeCalendar();
@@ -192,4 +194,10 @@ public class Store {
         //System.out.println("ABC123: comparing: " + type + (type.equals("hat") || type.equals("shirt") || type.equals("bandana")));
         return (type.equals("hat") || type.equals("shirt") || type.equals("bandana"));
     }
+
+    public String get_name() {
+        return name_;
+    }
+
+    public void set_name(String newName) {name_ = newName;}
 }
