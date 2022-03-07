@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Invoker {
     
     private Command slot;
@@ -8,7 +10,7 @@ public class Invoker {
         slot = command;
     }
 
-    public void press_button() {
-        slot.execute();
+    public void press_button(Scanner reader) {
+        slot.execute(reader);
     }
 }

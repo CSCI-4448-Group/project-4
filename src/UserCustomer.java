@@ -10,7 +10,7 @@ public class UserCustomer {
     }
 
     private void print_options() {
-        System.out.println("Select option by entering the desired number:");
+        System.out.println("\nSelect option by entering the desired number:");
         System.out.println("1. Select a store");
         System.out.println("2. Buy a custom guitar kit from the store");
         System.out.println("3. Get the name of the clerk you are talking to");
@@ -18,51 +18,67 @@ public class UserCustomer {
         System.out.println("5. Sell an item to the store");
         System.out.println("6. Buy an item from the store");
         System.out.println("7. End interactions and leave the store\n");
-        System.out.println("What would you like to do?");
     }
 
     public void begin_options() {
         boolean running = true;
         Scanner reader = new Scanner(System.in);
+        print_options();
         while (running) {
-            print_options();
-            int choice = 0;
-            while (choice < 0 || choice > 7) {
+            System.out.println("What would you like to do?");
+            int choice = -1;
+            boolean valid = false;
+            do {
+                valid = false;
                 try {
-                    choice = reader.nextInt();
-                } catch (Exception e) {
-                    System.out.println("Must enter a number 1-7, or 0 to print the options again.");
-                }
-            }
-            reader.close();
+                    choice = Integer.parseInt(reader.nextLine());
+                    if (choice < 0 || choice > 7) {
+                        System.out.println("Must enter a number 1-7, or 0 to print the options again.");
+                    } else {
+                        valid = true;
+                    }
+                } catch (NumberFormatException e) {
+                    System.out.println("Please enter an integer number as input.");
+                } 
+            } while (valid == false);
 
             switch(choice) {
                 case 0:
                     print_options();
+                    break;
                 case 1: 
                     invoker_.set_slot(new selectStoreCommand(receiver_));
-                    invoker_.press_button();
+                    invoker_.press_button(reader);
+                    break;
                 case 2:
                     invoker_.set_slot(new buyGuitarKitCommand(receiver_));
-                    invoker_.press_button();
+                    invoker_.press_button(reader);
+                    break;
                 case 3:
                     invoker_.set_slot(new printClerkNameCommand(receiver_));
-                    invoker_.press_button();
+                    invoker_.press_button(reader);
+                    break;
                 case 4: 
                     invoker_.set_slot(new getCurrentTimeCommand(receiver_));
-                    invoker_.press_button();
+                    invoker_.press_button(reader);
+                    break;
                 case 5: 
                     invoker_.set_slot(new sellItemCommand(receiver_));
-                    invoker_.press_button();
+                    invoker_.press_button(reader);
+                    break;
                 case 6: 
                     invoker_.set_slot(new buyItemCommand(receiver_));
-                    invoker_.press_button();
+                    invoker_.press_button(reader);
+                    break;
                 case 7: 
                     System.out.println("You left the store");
                     running = false;
+                    break;
                 default:
                     System.out.println("There is an error in the logic, " + choice + " should not be possible.");
+                    break;
             }
         }
+        reader.close();
     }
 }
