@@ -1,9 +1,20 @@
-Logger wrote: Velma arrives at the store on Day 6
-Logger wrote: Velma is checking the register and there is $1340.70
-Logger wrote: The total number of items ordered is 3
-Logger wrote: The total number of items in the inventory is 49
-Logger wrote: The sum of today's inventory is $1195.70
-Logger wrote: The total number of items damaged in tuning is 0
-Logger wrote: The total number of items sold by Velma on day 6 is 2
-Logger wrote: The total number of items bought by Velma on day 6 is 1
-Logger wrote: Velma locked up the store and went home for the day
+Logger wrote:  (FNMSNorth) Fahad arrives at the store on Day 6
+Logger wrote:  (FNMSNorth) Fahad is checking the register and there is $1042.20
+Logger wrote:  (FNMSNorth) The total number of items in the inventory is 46
+Logger wrote:  (FNMSNorth) The sum of today's inventory is $967.30
+Logger wrote:  (FNMSNorth) The total number of items damaged in tuning is 0
+Logger wrote:  (FNMSNorth) The total number of items sold by Fahad on day 6 is 3
+Logger wrote:  (FNMSNorth) The total number of items bought by Fahad on day 6 is 0
+Logger wrote:  (FNMSNorth) The total number of items damaged in cleaning is 2
+Logger wrote:  (FNMSNorth) Fahad locked up the store and went home for the day
+Logger wrote:  (FNMSSouth) James arrives at the store on Day 6
+Logger wrote:  (FNMSSouth) 6 number of items arrived at the store on Day 6
+Logger wrote:  (FNMSSouth) James is checking the register and there is $1376.90
+Logger wrote:  (FNMSSouth) The total number of items ordered is 3
+Logger wrote:  (FNMSSouth) The total number of items in the inventory is 49
+Logger wrote:  (FNMSSouth) The sum of today's inventory is $1065.30
+Logger wrote:  (FNMSSouth) The total number of items damaged in tuning is 1
+Logger wrote:  (FNMSSouth) The total number of items sold by James on day 6 is 6
+Logger wrote:  (FNMSSouth) The total number of items bought by James on day 6 is 2
+Logger wrote:  (FNMSSouth) The total number of items damaged in cleaning is 3
+Logger wrote:  (FNMSSouth) James locked up the store and went home for the day
