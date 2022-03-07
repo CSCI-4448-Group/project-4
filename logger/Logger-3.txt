@@ -1,9 +1,17 @@
-Logger wrote: Shaggy arrives at the store on Day 3
-Logger wrote: Shaggy is checking the register and there is 1423.3
-Logger wrote: The total number of items ordered is 3
-Logger wrote: The total number of items in the inventory is 50
-Logger wrote: The sum of today's inventory is 992.5
-Logger wrote: The total number of items damaged in tuning is 0
-Logger wrote: The total number of items sold by Shaggy on day 3 is 6
-Logger wrote: The total number of items bought by Shaggy on day 3 is 2
-Logger wrote: Shaggy locked up the store and went home for the day
+Logger wrote:  (FNMSNorth) Bill arrives at the store on Day 3
+Logger wrote:  (FNMSNorth) 3 number of items arrived at the store on Day 3
+Logger wrote:  (FNMSNorth) Bill is checking the register and there is $1356.70
+Logger wrote:  (FNMSNorth) The total number of items in the inventory is 42
+Logger wrote:  (FNMSNorth) The sum of today's inventory is $856.00
+Logger wrote:  (FNMSNorth) The total number of items damaged in tuning is 0
+Logger wrote:  (FNMSNorth) The total number of items sold by Bill on day 3 is 3
+Logger wrote:  (FNMSNorth) The total number of items bought by Bill on day 3 is 3
+Logger wrote:  (FNMSNorth) Bill locked up the store and went home for the day
+Logger wrote:  (FNMSSouth) Shaggy arrives at the store on Day 3
+Logger wrote:  (FNMSSouth) Shaggy is checking the register and there is $1185.10
+Logger wrote:  (FNMSSouth) The total number of items in the inventory is 42
+Logger wrote:  (FNMSSouth) The sum of today's inventory is $911.90
+Logger wrote:  (FNMSSouth) The total number of items damaged in tuning is 1
+Logger wrote:  (FNMSSouth) The total number of items sold by Shaggy on day 3 is 5
+Logger wrote:  (FNMSSouth) The total number of items bought by Shaggy on day 3 is 2
+Logger wrote:  (FNMSSouth) Shaggy locked up the store and went home for the day

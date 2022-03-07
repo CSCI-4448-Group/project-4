@@ -1,9 +1,19 @@
-Logger wrote: Velma arrives at the store on Day 18
-Logger wrote: 3 number of items arrived at the store on Day 18
-Logger wrote: Velma is checking the register and there is 2499.9600000000005
-Logger wrote: The total number of items in the inventory is 52
-Logger wrote: The sum of today's inventory is 1124.8999999999999
-Logger wrote: The total number of items damaged in tuning is 0
-Logger wrote: The total number of items sold by Velma on day 18 is 2
-Logger wrote: The total number of items bought by Velma on day 18 is 2
-Logger wrote: Velma locked up the store and went home for the day
+Logger wrote:  (FNMSNorth) Bill arrives at the store on Day 18
+Logger wrote:  (FNMSNorth) Bill is checking the register and there is $1631.02
+Logger wrote:  (FNMSNorth) The total number of items ordered is 3
+Logger wrote:  (FNMSNorth) The total number of items in the inventory is 61
+Logger wrote:  (FNMSNorth) The sum of today's inventory is $1891.70
+Logger wrote:  (FNMSNorth) The total number of items damaged in tuning is 0
+Logger wrote:  (FNMSNorth) The total number of items sold by Bill on day 18 is 4
+Logger wrote:  (FNMSNorth) The total number of items bought by Bill on day 18 is 3
+Logger wrote:  (FNMSNorth) The total number of items damaged in cleaning is 1
+Logger wrote:  (FNMSNorth) Bill locked up the store and went home for the day
+Logger wrote:  (FNMSSouth) Shaggy arrives at the store on Day 18
+Logger wrote:  (FNMSSouth) 3 number of items arrived at the store on Day 18
+Logger wrote:  (FNMSSouth) Shaggy is checking the register and there is $2161.00
+Logger wrote:  (FNMSSouth) The total number of items in the inventory is 63
+Logger wrote:  (FNMSSouth) The sum of today's inventory is $1899.30
+Logger wrote:  (FNMSSouth) The total number of items damaged in tuning is 1
+Logger wrote:  (FNMSSouth) The total number of items sold by Shaggy on day 18 is 5
+Logger wrote:  (FNMSSouth) The total number of items bought by Shaggy on day 18 is 3
+Logger wrote:  (FNMSSouth) Shaggy locked up the store and went home for the day

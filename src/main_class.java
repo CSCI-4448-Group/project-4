@@ -4,7 +4,9 @@ class main_class {
 
     public static void begin_day(Store fnms, Clerk current_clerk, Tracker tracker) throws Exception
     {
-        Logger loggerGuy = new Logger(fnms, current_clerk);
+        Logger loggerGuy;
+        loggerGuy = Logger.getInstance();
+        loggerGuy.Logger_set(fnms, current_clerk);
 
         tracker.registerClerk(current_clerk);
 
@@ -31,7 +33,7 @@ class main_class {
 
      public static void print_final_messages(Store fnms)
      {
-         System.out.println("Following a 30 day simulation, the following summary of the store's activities is printed below: ");
+         System.out.println("Following a 30 day simulation, the following summary of the " + fnms.get_name() + "'s activities is printed below: ");
          System.out.println();
 
          // Inventory print statement including items themselves and total value
@@ -71,7 +73,7 @@ class main_class {
          System.out.println("\n");
 
          // The final count of money in the cash register
-         // get_register returns a register object, get_ammount returns the amount as a double that's currently in the register
+         // get_register returns a register object, get_amount returns the amount as a double that's currently in the register
          System.out.println("The final amount of money in the cash register is: ");
          System.out.println("$" + Double.toString(fnms.get_register().get_amount()));
          System.out.println("\n");
@@ -83,12 +85,23 @@ class main_class {
          System.out.println("\n");
      }
 
-    public static void runFnmsSimulation(Store FNMS, Tracker tracker) throws Exception {
+    public static void runFnmsSimulation() throws Exception {
+
+        // Initialize store and two clerk objects
+        EmployeePool empPool = EmployeePool.getInstance();
+        Store FNMSNorth = new Store("FNMSNorth", new NorthGuitarKitFactory());
+        Store FNMSSouth = new Store("FNMSSouth", new SouthGuitarKitFactory());
+
+        // Initialize list of stores
+        ArrayList<Store> stores = new ArrayList<>();
+        stores.add(FNMSNorth);
+        stores.add(FNMSSouth);
+
+        Tracker tracker;
+
+
         // Main program loop
         // Run loop for 30 days, calling begin_day each time, and print out a delineator between each day.
-
-        // Choose a random number (either 0 or 1) and assign the respective clerk to work for that day.
-
         for (int i = 0; i < 30; i ++)
         {
 
@@ -96,33 +109,32 @@ class main_class {
             
             if ((i + 1) % 7 == 0) {
                 System.out.println("Day " + Integer.toString(i + 1) + " is a Sunday, so the store did not open.");
-                FNMS.get_calendar().incr_current_day();
+                FNMSNorth.get_calendar().incr_current_day();
+                FNMSSouth.get_calendar().incr_current_day();
+                empPool.reset_days();
             } else {
-                Clerk current_clerk = FNMS.get_clerk_of_the_day();
-                begin_day(FNMS, current_clerk, tracker);
-            }
-
-            if ((i+1) % 7 == 0) {
-                for(Clerk clerk : FNMS.get_clerks()){
-                    clerk.set_days_worked(0);
-                }
+                ArrayList<Clerk> chosenClerks = empPool.get_clerks_of_day(2,stores);
+                tracker = Tracker.getInstance(FNMSNorth);
+                begin_day(FNMSNorth, chosenClerks.get(0), tracker);
+                tracker = Tracker.getInstance(FNMSSouth);
+                begin_day(FNMSSouth, chosenClerks.get(1), tracker);
             }
 
             System.out.println("===========================================");
             System.out.println("\n");
         }
+        // Prints the summary / final messages
+        print_final_messages(FNMSNorth);
+        print_final_messages(FNMSSouth);
     }
 
     public static void main(String[] args) throws Exception {
-        // Initialize store and two clerk objects
-        Store FNMS = new Store();
 
-        Tracker tracker = new Tracker(FNMS);
 
         // Run the store simulation
-        runFnmsSimulation(FNMS, tracker);
+        runFnmsSimulation();
 
-        // Prints the summary / final messages
-        print_final_messages(FNMS);
+
+
     }
 }

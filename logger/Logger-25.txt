@@ -1,10 +1,17 @@
-Logger wrote: Daphne arrives at the store on Day 25
-Logger wrote: 3 number of items arrived at the store on Day 25
-Logger wrote: Daphne is checking the register and there is 2839.4200000000005
-Logger wrote: The total number of items in the inventory is 51
-Logger wrote: The sum of today's inventory is 1256.6
-Logger wrote: The total number of items damaged in tuning is 0
-Logger wrote: The total number of items sold by Daphne on day 25 is 4
-Logger wrote: The total number of items bought by Daphne on day 25 is 4
-Logger wrote: The total number of items damaged in cleaning is 4
-Logger wrote: Daphne locked up the store and went home for the day
+Logger wrote:  (FNMSNorth) James arrives at the store on Day 25
+Logger wrote:  (FNMSNorth) James is checking the register and there is $2139.08
+Logger wrote:  (FNMSNorth) The total number of items in the inventory is 64
+Logger wrote:  (FNMSNorth) The sum of today's inventory is $1802.90
+Logger wrote:  (FNMSNorth) The total number of items damaged in tuning is 2
+Logger wrote:  (FNMSNorth) The total number of items sold by James on day 25 is 4
+Logger wrote:  (FNMSNorth) The total number of items bought by James on day 25 is 0
+Logger wrote:  (FNMSNorth) James locked up the store and went home for the day
+Logger wrote:  (FNMSSouth) Shaggy arrives at the store on Day 25
+Logger wrote:  (FNMSSouth) Shaggy is checking the register and there is $2945.62
+Logger wrote:  (FNMSSouth) The total number of items ordered is 3
+Logger wrote:  (FNMSSouth) The total number of items in the inventory is 57
+Logger wrote:  (FNMSSouth) The sum of today's inventory is $1607.90
+Logger wrote:  (FNMSSouth) The total number of items damaged in tuning is 0
+Logger wrote:  (FNMSSouth) The total number of items sold by Shaggy on day 25 is 5
+Logger wrote:  (FNMSSouth) The total number of items bought by Shaggy on day 25 is 4
+Logger wrote:  (FNMSSouth) Shaggy locked up the store and went home for the day

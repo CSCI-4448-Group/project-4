@@ -1,10 +1,19 @@
-Logger wrote: Shaggy arrives at the store on Day 11
-Logger wrote: Shaggy is checking the register and there is 2037.7
-Logger wrote: The total number of items ordered is 3
-Logger wrote: The total number of items in the inventory is 48
-Logger wrote: The sum of today's inventory is 1034.1
-Logger wrote: The total number of items damaged in tuning is 0
-Logger wrote: The total number of items sold by Shaggy on day 11 is 3
-Logger wrote: The total number of items bought by Shaggy on day 11 is 1
-Logger wrote: The total number of items damaged in cleaning is 1
-Logger wrote: Shaggy locked up the store and went home for the day
+Logger wrote:  (FNMSNorth) Velma arrives at the store on Day 11
+Logger wrote:  (FNMSNorth) 9 number of items arrived at the store on Day 11
+Logger wrote:  (FNMSNorth) Velma is checking the register and there is $1181.26
+Logger wrote:  (FNMSNorth) The total number of items ordered is 3
+Logger wrote:  (FNMSNorth) The total number of items in the inventory is 71
+Logger wrote:  (FNMSNorth) The sum of today's inventory is $1791.50
+Logger wrote:  (FNMSNorth) The total number of items damaged in tuning is 1
+Logger wrote:  (FNMSNorth) The total number of items sold by Velma on day 11 is 2
+Logger wrote:  (FNMSNorth) The total number of items bought by Velma on day 11 is 1
+Logger wrote:  (FNMSNorth) Velma locked up the store and went home for the day
+Logger wrote:  (FNMSSouth) Bill arrives at the store on Day 11
+Logger wrote:  (FNMSSouth) Bill is checking the register and there is $1703.00
+Logger wrote:  (FNMSSouth) The total number of items ordered is 3
+Logger wrote:  (FNMSSouth) The total number of items in the inventory is 68
+Logger wrote:  (FNMSSouth) The sum of today's inventory is $1728.00
+Logger wrote:  (FNMSSouth) The total number of items damaged in tuning is 0
+Logger wrote:  (FNMSSouth) The total number of items sold by Bill on day 11 is 2
+Logger wrote:  (FNMSSouth) The total number of items bought by Bill on day 11 is 1
+Logger wrote:  (FNMSSouth) Bill locked up the store and went home for the day

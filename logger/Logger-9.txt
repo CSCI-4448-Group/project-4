@@ -1,9 +1,19 @@
-Logger wrote: Velma arrives at the store on Day 9
-Logger wrote: 3 number of items arrived at the store on Day 9
-Logger wrote: Velma is checking the register and there is 1889.06
-Logger wrote: The total number of items in the inventory is 49
-Logger wrote: The sum of today's inventory is 1059.8
-Logger wrote: The total number of items damaged in tuning is 0
-Logger wrote: The total number of items sold by Velma on day 9 is 2
-Logger wrote: The total number of items bought by Velma on day 9 is 1
-Logger wrote: Velma locked up the store and went home for the day
+Logger wrote:  (FNMSNorth) Shaggy arrives at the store on Day 9
+Logger wrote:  (FNMSNorth) Shaggy is checking the register and there is $964.80
+Logger wrote:  (FNMSNorth) The total number of items in the inventory is 64
+Logger wrote:  (FNMSNorth) The sum of today's inventory is $1549.10
+Logger wrote:  (FNMSNorth) The total number of items damaged in tuning is 4
+Logger wrote:  (FNMSNorth) The total number of items sold by Shaggy on day 9 is 5
+Logger wrote:  (FNMSNorth) The total number of items bought by Shaggy on day 9 is 4
+Logger wrote:  (FNMSNorth) The total number of items damaged in cleaning is 1
+Logger wrote:  (FNMSNorth) Shaggy locked up the store and went home for the day
+Logger wrote:  (FNMSSouth) James arrives at the store on Day 9
+Logger wrote:  (FNMSSouth) 3 number of items arrived at the store on Day 9
+Logger wrote:  (FNMSSouth) James is checking the register and there is $1529.60
+Logger wrote:  (FNMSSouth) The total number of items ordered is 3
+Logger wrote:  (FNMSSouth) The total number of items in the inventory is 66
+Logger wrote:  (FNMSSouth) The sum of today's inventory is $1642.50
+Logger wrote:  (FNMSSouth) The total number of items damaged in tuning is 0
+Logger wrote:  (FNMSSouth) The total number of items sold by James on day 9 is 5
+Logger wrote:  (FNMSSouth) The total number of items bought by James on day 9 is 4
+Logger wrote:  (FNMSSouth) James locked up the store and went home for the day
