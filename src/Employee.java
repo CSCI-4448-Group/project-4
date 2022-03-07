@@ -14,4 +14,5 @@ abstract class Employee extends Person{
     public void set_days_worked(int days) {days_worked_ = days;}
     public void incr_days_worked() {days_worked_+=1;}
     public Store get_store() {return store_;}
+    public void set_store(Store s) {store_ = s;}
 }
