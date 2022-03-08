@@ -145,7 +145,7 @@ class sellItemCommand extends Command {
     }
     public void execute(Scanner reader) {
         Random rand = new Random();
-        ArrayList<String> types = Inventory.get_item_types();
+        ArrayList<String> types = get_receiver().get_store().get_inventory().get_item_types();
         String type = types.get(rand.nextInt(types.size()));
         try {
             Item item = Item.generate_item(type);

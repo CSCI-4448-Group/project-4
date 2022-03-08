@@ -6,14 +6,13 @@ public class sellingCustomer extends Customer {
     private Item sellingItem_; // Customer wants to sell an item
 
     // Initialize Selling Customer
-    public sellingCustomer (String name) throws Exception {
+    public sellingCustomer (String name, ArrayList<String> item_types) throws Exception {
         super(name);
-        initializeSellingCustomer();
+        initializeSellingCustomer(item_types);
     }
 
-    public void initializeSellingCustomer () throws Exception {
+    public void initializeSellingCustomer (ArrayList<String> item_types) throws Exception {
         // Get a list of strings of the types of items
-        ArrayList<String> item_types = Inventory.get_item_types();
         Random rand = new Random();
 
         // Gets a random type of item from list

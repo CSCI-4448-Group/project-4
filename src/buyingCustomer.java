@@ -5,14 +5,13 @@ public class buyingCustomer extends Customer {
 
     private String wantedType_; // Customer wants to buy an item of certain type
 
-     public buyingCustomer(String name) {
+     public buyingCustomer(String name, ArrayList<String> item_types) {
          super(name);
-         initializeBuyingCustomer();
+         initializeBuyingCustomer(item_types);
      }
 
-     public void initializeBuyingCustomer() {
+     public void initializeBuyingCustomer(ArrayList<String> item_types) {
          //Get a list of item types
-         ArrayList<String> item_types = Inventory.get_item_types();
          Random rand = new Random();
 
          // Gets a random type of item from list

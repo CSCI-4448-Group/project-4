@@ -358,7 +358,7 @@ public class Clerk extends Employee implements Subject {
     }
 
     public void user_buys_item(Scanner reader) {
-        ArrayList<String> item_types = Inventory.get_item_types();
+        ArrayList<String> item_types = get_store().get_inventory().get_item_types();
         Random rand = new Random();
 
          // Gets a random type of item from list
