@@ -2,7 +2,7 @@ import java.util.Random;
 import java.util.ArrayList;
 class main_class {
 
-    public static void begin_day(Store fnms, Clerk current_clerk, Tracker tracker) throws Exception
+    public static void begin_day(Store fnms, Clerk current_clerk, Tracker tracker, boolean userCommandDay) throws Exception
     {
         Logger loggerGuy;
         loggerGuy = Logger.getInstance();
@@ -27,6 +27,52 @@ class main_class {
 
         // Clerk announces he leaves the store
         current_clerk.leave_store();
+    }
+
+    public static void begin_user_day(Store FNMSNorth, Store FNMSSouth, Clerk north_clerk, Clerk south_clerk,Tracker tracker) throws Exception
+    {
+        Logger loggerGuy;
+        loggerGuy = Logger.getInstance();
+        loggerGuy.Logger_set(FNMSNorth, north_clerk);
+
+        tracker.registerClerk(north_clerk);
+
+        // Clerk arrives at store
+        north_clerk.arrive_at_store();
+
+        // Clerk checks the register, goes to bank as necessary
+        north_clerk.check_register();
+
+        // Clerk checks inventory, places orders for new items if none are present in the store
+        north_clerk.do_inventory();
+
+        loggerGuy.Logger_set(FNMSSouth, south_clerk);
+
+        tracker.registerClerk(south_clerk);
+
+        // Clerk arrives at store
+        south_clerk.arrive_at_store();
+
+        // Clerk checks the register, goes to bank as necessary
+        south_clerk.check_register();
+
+        // Clerk checks inventory, places orders for new items if none are present in the store
+        south_clerk.do_inventory();
+
+        UserCustomer user = new UserCustomer(north_clerk, new Invoker());
+        user.begin_options();
+
+        // Clerk cleans the store, possibly damages items in the process
+        north_clerk.clean_store();
+
+        // Clerk announces he leaves the store
+        north_clerk.leave_store();
+
+        // Clerk cleans the store, possibly damages items in the process
+        south_clerk.clean_store();
+
+        // Clerk announces he leaves the store
+        south_clerk.leave_store();
     }
 
     // Possible way to handle announcements, may make it easier?
@@ -86,6 +132,9 @@ class main_class {
      }
 
     public static void runFnmsSimulation() throws Exception {
+        Random rand = new Random();
+        int randomDay = 10 + rand.nextInt(20);
+        if (randomDay % 7 == 0) {randomDay++;}
 
         // Initialize store and two clerk objects
         EmployeePool empPool = EmployeePool.getInstance();
@@ -102,7 +151,7 @@ class main_class {
 
         // Main program loop
         // Run loop for 30 days, calling begin_day each time, and print out a delineator between each day.
-        for (int i = 0; i < 30; i ++)
+        for (int i = 0; i < 30; i++)
         {
 
             System.out.println("===========================================");
@@ -115,9 +164,9 @@ class main_class {
             } else {
                 ArrayList<Clerk> chosenClerks = empPool.get_clerks_of_day(2,stores);
                 tracker = Tracker.getInstance(FNMSNorth);
-                begin_day(FNMSNorth, chosenClerks.get(0), tracker);
+                begin_day(FNMSNorth, chosenClerks.get(0), tracker, FNMSNorth.get_calendar().get_current_day() == randomDay);
                 tracker = Tracker.getInstance(FNMSSouth);
-                begin_day(FNMSSouth, chosenClerks.get(1), tracker);
+                begin_day(FNMSSouth, chosenClerks.get(1), tracker, FNMSSouth.get_calendar().get_current_day() == randomDay);
             }
 
             System.out.println("===========================================");

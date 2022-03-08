@@ -99,6 +99,7 @@ public class Store {
     // Init calendar object
     public void initializeCalendar() {
         calendar_ = new Calendar();
+    
     }
 
     // Init ordered items hashmap

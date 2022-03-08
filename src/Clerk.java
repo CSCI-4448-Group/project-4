@@ -6,6 +6,8 @@ public class Clerk extends Employee implements Subject {
     private ArrayList<Observer> observersList_ = new ArrayList<Observer>(); // Track an observers list of event consumers who are tracking publishes by the Clerk
     public String announcement_; // Define an announcement to hold the announcements from the Clerk which are sent to notifyObservers
     private int damagedCounter = 0; // Track the number of items damaged by the clerk
+    private int soldItemsCounter = 0;
+    private int boughtItemsCounter = 0;
 
     // Construct clerk with name, store, TuneBehavior (Strategy Pattern)
     public Clerk(String name, Store s, TuneBehavior tuneBehavior) {
@@ -266,30 +268,24 @@ public class Clerk extends Employee implements Subject {
 
     public void open_store() throws Exception{
         Store s = get_store();
-        int soldItemsCounter = 0;
-        int boughtItemsCounter = 0;
-        if (get_store().get_calendar().get_current_day() == 10) {
-            UserCustomer user = new UserCustomer(this, new Invoker());
-            user.begin_options();
-        } else {
-            ArrayList<buyingCustomer> buyCustomers = generateBuyingCustomers();
-            for(buyingCustomer buyer : buyCustomers){ //For each buying customer
-                if(get_store().get_inventory().get_items_of_type(buyer.get_wanted_type()).isEmpty()){ //If there are no items of type that customer wants
-                    System.out.println(buyer.get_name() + " tried to buy a " + buyer.get_wanted_type() + " but none were available");
-                    continue;
-                }
-                boolean didSell = attempt_sale(buyer,get_store().get_inventory().get_items_of_type(buyer.get_wanted_type()).get(0)); //Attempt to sell the first item of appropriate type
-                if (didSell) {
-                    soldItemsCounter += 1;
-                }
-            }
 
-            ArrayList<sellingCustomer> sellCustomers = generateSellingCustomers();
-            for(sellingCustomer seller : sellCustomers){ //For each selling customer
-                boolean didBuy = attempt_purchase(seller, seller.get_item()); //Attempt to buy their item
-                if (didBuy) {
-                    boughtItemsCounter += 1;
-                }
+        ArrayList<buyingCustomer> buyCustomers = generateBuyingCustomers();
+        for(buyingCustomer buyer : buyCustomers){ //For each buying customer
+            if(get_store().get_inventory().get_items_of_type(buyer.get_wanted_type()).isEmpty()){ //If there are no items of type that customer wants
+                System.out.println(buyer.get_name() + " tried to buy a " + buyer.get_wanted_type() + " but none were available");
+                continue;
+            }
+            boolean didSell = attempt_sale(buyer,get_store().get_inventory().get_items_of_type(buyer.get_wanted_type()).get(0)); //Attempt to sell the first item of appropriate type
+            if (didSell) {
+                soldItemsCounter += 1;
+            }
+        }
+
+        ArrayList<sellingCustomer> sellCustomers = generateSellingCustomers();
+        for(sellingCustomer seller : sellCustomers){ //For each selling customer
+            boolean didBuy = attempt_purchase(seller, seller.get_item()); //Attempt to buy their item
+            if (didBuy) {
+                boughtItemsCounter += 1;
             }
         }
 
@@ -338,26 +334,24 @@ public class Clerk extends Employee implements Subject {
         return choice.equals("y");
     }
 
-    public boolean sell_user_item(Item toBuyItem, Scanner reader) {
+    public void sell_user_item(Item toBuyItem, Scanner reader) {
         double purchPrice = evaluate_item(toBuyItem);
         if(get_store().is_discontinued(toBuyItem.get_item_type())){
             System.out.println("You tried to sell a " + toBuyItem.get_name() + " but the store no longer purchases these");
-            return false;
         }
         System.out.println("You want to sell your " + toBuyItem.get_name() + " to " + get_name() + ".");
         if(user_input(reader, purchPrice, true)){
             System.out.println(get_name() + " bought a " + toBuyItem.get_condition().get_condition() + " condition " + toBuyItem.get_new_or_used() + " " + toBuyItem.get_name() + " from you for $" + String.format("%.2f",purchPrice));
             purch_item(toBuyItem,purchPrice);
-            return true;
+            boughtItemsCounter += 1;
         }
         else if (user_input(reader, purchPrice*1.1, true)) {
             System.out.println(get_name() + " bought a " + toBuyItem.get_condition().get_condition() + " condition " + toBuyItem.get_new_or_used() + " " + toBuyItem.get_name() + " from you for $" + String.format("%.2f",purchPrice*1.1) + " after a 10% offer increase.");
             purch_item(toBuyItem, purchPrice*1.1);
-            return true;
+            boughtItemsCounter += 1;
         }
         else{
             System.out.println(get_name() + " tried buying a " + toBuyItem.get_condition().get_condition() + " condition " + toBuyItem.get_new_or_used() + " " + toBuyItem.get_name() + " from you for $" + String.format("%.2f",purchPrice*1.1) + " but you refused.");
-            return false;
         }
     }
 
@@ -373,10 +367,12 @@ public class Clerk extends Employee implements Subject {
         if (user_input(reader, price, false)){ //If we roll 50% chance and win, sell full price
             sell_item(toSellItem, toSellItem.get_list_price());
             System.out.println(get_name() + " sold a " + toSellItem.get_name() + " to you for $" + String.format("%.2f",toSellItem.get_sale_price()));
+            soldItemsCounter += 1;
         }
         else if(user_input(reader, price*.9, false)){ //else if we roll 75% chance and win, sell 90% full price
             sell_item(toSellItem, toSellItem.get_list_price()*.9);
             System.out.println(get_name() + " sold a " + toSellItem.get_name() + " to you for $" + String.format("%.2f",toSellItem.get_sale_price()) + " after a 10% discount.");
+            soldItemsCounter += 1;
         }
         else{
             System.out.println(get_name() + " tried selling a " + toSellItem.get_condition().get_condition() + " condition " + toSellItem.get_new_or_used() + " " + toSellItem.get_name() + " to you for $" + String.format("%.2f",toSellItem.get_list_price()) + " but you refused.");
