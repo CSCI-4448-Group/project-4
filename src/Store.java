@@ -202,5 +202,7 @@ public class Store {
         return name_;
     }
 
+    public GuitarKitFactory get_factory() {return kitFactory_;}
+
     public void set_name(String newName) {name_ = newName;}
 }

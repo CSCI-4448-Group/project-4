@@ -42,7 +42,7 @@ public class UserCustomer {
                         valid = true;
                     }
                 } catch (NumberFormatException e) {
-                    System.out.println("Please enter an integer number as input.");
+                    System.out.println("Please enter an integer number as input (0 to print the options again).");
                 } 
             } while (valid == false);
 

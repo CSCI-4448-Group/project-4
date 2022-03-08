@@ -2,6 +2,8 @@ import java.util.Scanner;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
 
 public abstract class Command {
@@ -55,10 +57,6 @@ class selectStoreCommand extends Command {
                 user_.set_receiver(south_clerk_);
             }
         }
-        
-
-        // Need to implement option to set store
-        // get_receiver().set_store(choice); 
     }
 }
 
@@ -67,8 +65,57 @@ class buyGuitarKitCommand extends Command {
         set_receiver(receiver);
     }
     public void execute(Scanner reader) {
-        System.out.println("You are now buying a guitar kit");
-        // receiver_.buy_guitar_kit();
+        GuitarKitFactory factory = get_receiver().get_store().get_factory();
+        String[] types = {"Bridge", "Knobset", "Covers", "Neck", "Pickguard", "Pickups"};
+        String choice = "Z";
+
+        ArrayList<Integer> choices = new ArrayList<>();
+        String[] north_chars = {"A", "B", "C"};
+        String[] south_chars = {"A", "B", "D"};
+        Map<String, Integer> map = new HashMap<String, Integer>();
+        map.put("A", 1);
+        map.put("B", 2);
+        map.put("C", 3);
+        map.put("D", 3);
+
+        String[] chars = get_receiver().get_store().get_name() == "FNMSNorth" ? north_chars : south_chars;
+
+        String item_name = "Guitar kit containing:";
+        int total_cost = 0;
+
+        System.out.println("You are buying a Guitar Kit.");
+
+        while (choices.size() < types.length) {
+            int current = choices.size();
+            choice = "";
+            while (!chars[0].equals(choice) && !chars[1].equals(choice) && !chars[2].equals(choice)) {
+                try {
+                    chars = get_receiver().get_store().get_name() == "FNMSNorth" ? north_chars : south_chars;
+                    System.out.println("Would you like " + types[current] + chars[0] + ", " + types[current] + chars[1] + ", or " + types[current] + chars[2] + "?");
+                    choice = reader.nextLine();
+                    if (!chars[0].equals(choice) && !chars[1].equals(choice) && !chars[2].equals(choice)) {
+                        System.out.println("You must enter " + chars[0] + ", " + chars[1] + ", or " + chars[2] + ".");
+                    }
+                } catch (Exception e) {
+                    System.out.println("Error");
+                }
+            }
+            item_name += " " + types[current] + choice + ",";
+            choices.add(map.get(choice));
+        }
+
+        total_cost += factory.createBridge(choices.get(0)).get_cost();
+        total_cost += factory.createKnobset(choices.get(1)).get_cost();
+        total_cost += factory.createCovers(choices.get(2)).get_cost();
+        total_cost += factory.createNeck(choices.get(3)).get_cost();
+        total_cost += factory.createPickguard(choices.get(4)).get_cost();
+        total_cost += factory.createPickups(choices.get(5)).get_cost();
+
+
+        Item kit = new GuitarKitItem(item_name, total_cost/2, total_cost, true, get_receiver().get_store().get_calendar().get_current_day(), Condition.randomCondition(), total_cost);
+        get_receiver().sell_item(kit, total_cost);
+
+        System.out.println(get_receiver().get_name() + " sold a " + kit.get_name() + " to you for $" + String.format("%.2f",kit.get_sale_price()));
     }
 }
 
