@@ -1,19 +1,20 @@
-Logger wrote:  (FNMSNorth) Shaggy arrives at the store on Day 22
+Logger wrote:  (FNMSNorth) Velma arrives at the store on Day 22
 Logger wrote:  (FNMSNorth) 6 number of items arrived at the store on Day 22
-Logger wrote:  (FNMSNorth) Shaggy is checking the register and there is $1823.38
+Logger wrote:  (FNMSNorth) Velma is checking the register and there is $2911.16
 Logger wrote:  (FNMSNorth) The total number of items ordered is 3
-Logger wrote:  (FNMSNorth) The total number of items in the inventory is 69
-Logger wrote:  (FNMSNorth) The sum of today's inventory is $1888.60
-Logger wrote:  (FNMSNorth) The total number of items damaged in tuning is 1
-Logger wrote:  (FNMSNorth) The total number of items sold by Shaggy on day 22 is 1
-Logger wrote:  (FNMSNorth) The total number of items bought by Shaggy on day 22 is 3
-Logger wrote:  (FNMSNorth) Shaggy locked up the store and went home for the day
-Logger wrote:  (FNMSSouth) James arrives at the store on Day 22
+Logger wrote:  (FNMSNorth) The total number of items in the inventory is 60
+Logger wrote:  (FNMSNorth) The sum of today's inventory is $1591.70
+Logger wrote:  (FNMSNorth) The total number of items damaged in tuning is 0
+Logger wrote:  (FNMSNorth) The total number of items sold by Velma on day 22 is 28
+Logger wrote:  (FNMSNorth) The total number of items bought by Velma on day 22 is 13
+Logger wrote:  (FNMSNorth) Velma locked up the store and went home for the day
+Logger wrote:  (FNMSSouth) Daphne arrives at the store on Day 22
 Logger wrote:  (FNMSSouth) 6 number of items arrived at the store on Day 22
-Logger wrote:  (FNMSSouth) James is checking the register and there is $2432.30
-Logger wrote:  (FNMSSouth) The total number of items in the inventory is 77
-Logger wrote:  (FNMSSouth) The sum of today's inventory is $2171.20
+Logger wrote:  (FNMSSouth) Daphne is checking the register and there is $2337.44
+Logger wrote:  (FNMSSouth) The total number of items ordered is 3
+Logger wrote:  (FNMSSouth) The total number of items in the inventory is 62
+Logger wrote:  (FNMSSouth) The sum of today's inventory is $1625.80
 Logger wrote:  (FNMSSouth) The total number of items damaged in tuning is 0
-Logger wrote:  (FNMSSouth) The total number of items sold by James on day 22 is 5
-Logger wrote:  (FNMSSouth) The total number of items bought by James on day 22 is 4
-Logger wrote:  (FNMSSouth) James locked up the store and went home for the day
+Logger wrote:  (FNMSSouth) The total number of items sold by Daphne on day 22 is 17
+Logger wrote:  (FNMSSouth) The total number of items bought by Daphne on day 22 is 8
+Logger wrote:  (FNMSSouth) Daphne locked up the store and went home for the day

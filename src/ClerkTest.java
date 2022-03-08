@@ -1,5 +1,6 @@
 import static org.junit.Assert.*;
 
+// Must use Junit 4.13 version or Junit 5
 public class ClerkTest {
 
     @org.junit.Before

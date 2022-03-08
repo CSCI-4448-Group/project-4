@@ -2,7 +2,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-// Potentially write assumption about using Junit 4.13 Junit 5
+// Must use Junit 4.13 version or Junit 5
 public class StoreTest {
 
     @Test

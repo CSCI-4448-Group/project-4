@@ -1,21 +1,18 @@
-Logger wrote:  (FNMSNorth) Fahad arrives at the store on Day 12
-Logger wrote:  (FNMSNorth) Fahad is checking the register and there is $1222.42
-Logger wrote:  (FNMSNorth) The total number of items in the inventory is 66
-Logger wrote:  (FNMSNorth) The sum of today's inventory is $1678.70
+Logger wrote:  (FNMSNorth) Daphne arrives at the store on Day 12
+Logger wrote:  (FNMSNorth) 3 number of items arrived at the store on Day 12
+Logger wrote:  (FNMSNorth) Daphne is checking the register and there is $1342.10
+Logger wrote:  (FNMSNorth) The total number of items in the inventory is 69
+Logger wrote:  (FNMSNorth) The sum of today's inventory is $1775.70
 Logger wrote:  (FNMSNorth) The total number of items damaged in tuning is 0
-Logger wrote:  (FNMSNorth) The total number of items sold by Fahad on day 12 is 6
-Logger wrote:  (FNMSNorth) The total number of items bought by Fahad on day 12 is 1
-Logger wrote:  (FNMSNorth) The total number of items damaged in cleaning is 3
-Logger wrote:  (FNMSNorth) Fahad locked up the store and went home for the day
-Logger wrote:  (FNMSSouth) Daphne arrives at the store on Day 12
-Logger wrote:  (FNMSSouth) 6 number of items arrived at the store on Day 12
-Logger wrote:  (FNMSSouth) Daphne is checking the register and there is $1787.40
-Logger wrote:  (FNMSSouth) The total number of items ordered is 3
-Logger wrote:  (FNMSSouth) The total number of items ordered is 3
-Logger wrote:  (FNMSSouth) The total number of items in the inventory is 67
-Logger wrote:  (FNMSSouth) The sum of today's inventory is $1727.70
-Logger wrote:  (FNMSSouth) The total number of items damaged in tuning is 0
-Logger wrote:  (FNMSSouth) The total number of items sold by Daphne on day 12 is 3
-Logger wrote:  (FNMSSouth) The total number of items bought by Daphne on day 12 is 3
-Logger wrote:  (FNMSSouth) The total number of items damaged in cleaning is 2
-Logger wrote:  (FNMSSouth) Daphne locked up the store and went home for the day
+Logger wrote:  (FNMSNorth) The total number of items sold by Daphne on day 12 is 11
+Logger wrote:  (FNMSNorth) The total number of items bought by Daphne on day 12 is 6
+Logger wrote:  (FNMSNorth) Daphne locked up the store and went home for the day
+Logger wrote:  (FNMSSouth) Velma arrives at the store on Day 12
+Logger wrote:  (FNMSSouth) 3 number of items arrived at the store on Day 12
+Logger wrote:  (FNMSSouth) Velma is checking the register and there is $1761.74
+Logger wrote:  (FNMSSouth) The total number of items in the inventory is 64
+Logger wrote:  (FNMSSouth) The sum of today's inventory is $1589.30
+Logger wrote:  (FNMSSouth) The total number of items damaged in tuning is 1
+Logger wrote:  (FNMSSouth) The total number of items sold by Velma on day 12 is 15
+Logger wrote:  (FNMSSouth) The total number of items bought by Velma on day 12 is 6
+Logger wrote:  (FNMSSouth) Velma locked up the store and went home for the day
