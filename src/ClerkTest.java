@@ -15,7 +15,7 @@ public class ClerkTest {
     @org.junit.Test
     public void test_get_days_worked_equals() {
         String clerkName = "Jose";
-        Store s = new Store("TestStore");
+        Store s = new Store("TestStore", new NorthGuitarKitFactory());
         TuneBehavior testTune = new HaphazardTune();
         Clerk testClerk = new Clerk(clerkName, s, testTune);
         assertEquals(testClerk.get_days_worked(), 0);
@@ -24,7 +24,7 @@ public class ClerkTest {
     @org.junit.Test
     public void test_get_days_worked_not_equals() {
         String clerkName = "Jose";
-        Store s = new Store("TestStore");
+        Store s = new Store("TestStore", new NorthGuitarKitFactory());
         TuneBehavior testTune = new HaphazardTune();
         Clerk testClerk = new Clerk(clerkName, s, testTune);
         assertNotEquals(testClerk.get_days_worked(), 100);
@@ -33,7 +33,7 @@ public class ClerkTest {
     @org.junit.Test
     public void test_get_store() {
         String clerkName = "Jose";
-        Store s  = new Store("TestStore");
+        Store s  = new Store("TestStore", new NorthGuitarKitFactory());
         TuneBehavior testTune = new HaphazardTune();
         Clerk testClerk = new Clerk(clerkName, s, testTune);
         assertEquals(testClerk.get_store(), s);
@@ -42,7 +42,7 @@ public class ClerkTest {
     @org.junit.Test
     public void test_get_name() {
         String clerkName = "Jose";
-        Store s  = new Store("TestStore");
+        Store s  = new Store("TestStore", new NorthGuitarKitFactory());
         TuneBehavior testTune = new HaphazardTune();
         Clerk testClerk = new Clerk(clerkName, s, testTune);
         assertEquals(testClerk.get_name(), clerkName);
@@ -51,7 +51,7 @@ public class ClerkTest {
     @org.junit.Test
     public void test_set_tune_behavior() {
         String clerkName = "Jose";
-        Store s = new Store("TestStore");
+        Store s = new Store("TestStore", new NorthGuitarKitFactory());
         TuneBehavior testTune = new HaphazardTune();
         Clerk testClerk = new Clerk(clerkName, s, testTune);
 
@@ -64,7 +64,7 @@ public class ClerkTest {
     @org.junit.Test
     public void test_calc_bonus_chance() {
         String clerkName = "Jose";
-        Store s = new Store("TestStore");
+        Store s = new Store("TestStore", new NorthGuitarKitFactory());
 
         TuneBehavior testTune = new HaphazardTune();
         Clerk testClerk = new Clerk(clerkName, s, testTune);
@@ -80,7 +80,7 @@ public class ClerkTest {
     @org.junit.Test
     public void test_go_to_bank() {
         String clerkName = "Jose";
-        Store s = new Store("TestStore");
+        Store s = new Store("TestStore", new NorthGuitarKitFactory());
         TuneBehavior testTune = new HaphazardTune();
         Clerk testClerk = new Clerk(clerkName, s, testTune);
 

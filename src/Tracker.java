@@ -14,6 +14,7 @@ public class Tracker implements Observer {
         calendar = s.get_calendar();
     }
 
+    // Double checked locking. Wait to synchronize until we know the tracker instance is null
     public static synchronized Tracker getInstance(Store s) {
         if (trackerInstance == null)
         {
