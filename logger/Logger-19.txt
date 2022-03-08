@@ -1,20 +1,17 @@
-Logger wrote:  (FNMSNorth) James arrives at the store on Day 19
-Logger wrote:  (FNMSNorth) 6 number of items arrived at the store on Day 19
-Logger wrote:  (FNMSNorth) James is checking the register and there is $1659.62
-Logger wrote:  (FNMSNorth) The total number of items ordered is 3
-Logger wrote:  (FNMSNorth) The total number of items in the inventory is 64
-Logger wrote:  (FNMSNorth) The sum of today's inventory is $2015.30
+Logger wrote:  (FNMSNorth) Velma arrives at the store on Day 19
+Logger wrote:  (FNMSNorth) Velma is checking the register and there is $2470.96
+Logger wrote:  (FNMSNorth) The total number of items in the inventory is 62
+Logger wrote:  (FNMSNorth) The sum of today's inventory is $1408.60
 Logger wrote:  (FNMSNorth) The total number of items damaged in tuning is 0
-Logger wrote:  (FNMSNorth) The total number of items sold by James on day 19 is 3
-Logger wrote:  (FNMSNorth) The total number of items bought by James on day 19 is 1
-Logger wrote:  (FNMSNorth) The total number of items damaged in cleaning is 4
-Logger wrote:  (FNMSNorth) James locked up the store and went home for the day
-Logger wrote:  (FNMSSouth) Bill arrives at the store on Day 19
-Logger wrote:  (FNMSSouth) Bill is checking the register and there is $2445.88
+Logger wrote:  (FNMSNorth) The total number of items sold by Velma on day 19 is 24
+Logger wrote:  (FNMSNorth) The total number of items bought by Velma on day 19 is 13
+Logger wrote:  (FNMSNorth) Velma locked up the store and went home for the day
+Logger wrote:  (FNMSSouth) Fahad arrives at the store on Day 19
+Logger wrote:  (FNMSSouth) Fahad is checking the register and there is $2234.60
 Logger wrote:  (FNMSSouth) The total number of items ordered is 3
-Logger wrote:  (FNMSSouth) The total number of items in the inventory is 62
-Logger wrote:  (FNMSSouth) The sum of today's inventory is $1903.40
-Logger wrote:  (FNMSSouth) The total number of items damaged in tuning is 1
-Logger wrote:  (FNMSSouth) The total number of items sold by Bill on day 19 is 3
-Logger wrote:  (FNMSSouth) The total number of items bought by Bill on day 19 is 2
-Logger wrote:  (FNMSSouth) Bill locked up the store and went home for the day
+Logger wrote:  (FNMSSouth) The total number of items in the inventory is 61
+Logger wrote:  (FNMSSouth) The sum of today's inventory is $1463.80
+Logger wrote:  (FNMSSouth) The total number of items damaged in tuning is 0
+Logger wrote:  (FNMSSouth) The total number of items sold by Fahad on day 19 is 29
+Logger wrote:  (FNMSSouth) The total number of items bought by Fahad on day 19 is 15
+Logger wrote:  (FNMSSouth) Fahad locked up the store and went home for the day
