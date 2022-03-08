@@ -13,9 +13,11 @@ public class Store {
     private ArrayList<Customer> sellingCustomers_; // SellingCustomers list
     private CashRegister register_; // Cash register
     private Calendar calendar_; // Calendar
+    private GuitarKitFactory kitFactory_; //Guitar Kit Factory
 
-    public Store(String name) {
+    public Store(String name, GuitarKitFactory kitFactory) {
         name_ = name;
+        kitFactory_ = kitFactory;
         initializeEmployees();
         initializeInventory();
         initializeCalendar();
