@@ -3,7 +3,7 @@ import java.util.ArrayList;
 
 public class Inventory{
     //Map from ItemType->List of items
-    private static HashMap<String, ArrayList<Item>> inventory_;
+    private HashMap<String, ArrayList<Item>> inventory_;
 
     Inventory(){
         initialize();
@@ -25,7 +25,7 @@ public class Inventory{
         return 0;
     }
 
-    public static ArrayList<String> get_item_types() {
+    public ArrayList<String> get_item_types() {
         ArrayList<String> mainList = new ArrayList<>();
         mainList.addAll(inventory_.keySet());
         return mainList;

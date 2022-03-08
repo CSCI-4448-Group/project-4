@@ -249,7 +249,7 @@ public class Clerk extends Employee implements Subject {
 
         for (int i = 1; i < randBuyers + 1; i++)
         {
-            buyCustomers.add(new buyingCustomer("Buying Customer " + i));
+            buyCustomers.add(new buyingCustomer("Buying Customer " + i, get_store().get_inventory().get_item_types()));
         }
         return buyCustomers;
     }
@@ -262,7 +262,7 @@ public class Clerk extends Employee implements Subject {
 
         for (int i = 1; i < randSellers + 1; i++)
         {
-            sellCustomers.add(new sellingCustomer("Selling Customer " + i));
+            sellCustomers.add(new sellingCustomer("Selling Customer " + i, get_store().get_inventory().get_item_types()));
         }
         return sellCustomers;
     }
@@ -358,7 +358,7 @@ public class Clerk extends Employee implements Subject {
     }
 
     public void user_buys_item(Scanner reader) {
-        ArrayList<String> item_types = Inventory.get_item_types();
+        ArrayList<String> item_types = get_store().get_inventory().get_item_types();
         Random rand = new Random();
 
          // Gets a random type of item from list
