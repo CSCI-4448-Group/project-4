@@ -81,7 +81,7 @@ class buyGuitarKitCommand extends Command {
         String[] chars = get_receiver().get_store().get_name() == "FNMSNorth" ? north_chars : south_chars;
 
         String item_name = "Guitar kit containing:";
-        int total_cost = 0;
+        Double total_cost = 0.0;
 
         System.out.println("You are buying a Guitar Kit.");
 
