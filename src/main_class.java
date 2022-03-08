@@ -60,7 +60,7 @@ class main_class {
         south_clerk.do_inventory();
 
         UserCustomer user = new UserCustomer(north_clerk, new Invoker());
-        user.begin_options();
+        user.begin_options(north_clerk, south_clerk);
 
         // Clerk cleans the store, possibly damages items in the process
         north_clerk.clean_store();
@@ -164,9 +164,13 @@ class main_class {
             } else {
                 ArrayList<Clerk> chosenClerks = empPool.get_clerks_of_day(2,stores);
                 tracker = Tracker.getInstance(FNMSNorth);
-                begin_day(FNMSNorth, chosenClerks.get(0), tracker, FNMSNorth.get_calendar().get_current_day() == randomDay);
-                tracker = Tracker.getInstance(FNMSSouth);
-                begin_day(FNMSSouth, chosenClerks.get(1), tracker, FNMSSouth.get_calendar().get_current_day() == randomDay);
+                if (randomDay == FNMSNorth.get_calendar().get_current_day()) {
+                    begin_user_day(FNMSNorth, FNMSSouth, chosenClerks.get(0), chosenClerks.get(1), tracker);
+                } else {
+                    begin_day(FNMSNorth, chosenClerks.get(0), tracker, FNMSNorth.get_calendar().get_current_day() == randomDay);
+                    // tracker = Tracker.getInstance(FNMSSouth);
+                    begin_day(FNMSSouth, chosenClerks.get(1), tracker, FNMSSouth.get_calendar().get_current_day() == randomDay);    
+                }
             }
 
             System.out.println("===========================================");

@@ -14,12 +14,19 @@ public abstract class Command {
 }
 
 class selectStoreCommand extends Command {
-    public selectStoreCommand(Clerk receiver) {
+    private Clerk north_clerk_;
+    private Clerk south_clerk_;
+    private UserCustomer user_;
+
+    public selectStoreCommand(Clerk receiver, Clerk north_clerk, Clerk south_clerk, UserCustomer user) {
         set_receiver(receiver);
+        north_clerk_ = north_clerk;
+        south_clerk_ = south_clerk;
+        user_ = user;
     }
     public void execute(Scanner reader) {
         // Used from https://stackoverflow.com/questions/5287538/how-to-get-the-user-input-in-java
-        System.out.println("Enter either store 1 as '1' or store 2 as '2': ");
+        System.out.println("Enter either North Store as '1' or South Store as '2': ");
         int choice = 0;
         boolean valid = false;
         do {
@@ -27,7 +34,7 @@ class selectStoreCommand extends Command {
             try {
                 choice = Integer.parseInt(reader.nextLine());
                 if (choice != 1 && choice != 2) {
-                    System.out.println("Must enter '1' for store 1, or '2' for store 2.");
+                    System.out.println("Must enter '1' for North Store, or '2' for South Store.");
                 } else {
                     valid = true;
                 }
@@ -37,7 +44,18 @@ class selectStoreCommand extends Command {
                 e.printStackTrace();
             }
         } while (valid == false);
-        System.out.println("You are now in store " + String.valueOf(choice));
+        if (choice == 1) {
+            System.out.println("You are now in the North Store");
+            if (get_receiver().get_name() != north_clerk_.get_name()) {
+                user_.set_receiver(north_clerk_);
+            }
+        } else {
+            System.out.println("You are now in the South Store");
+            if (get_receiver().get_name() != south_clerk_.get_name()) {
+                user_.set_receiver(south_clerk_);
+            }
+        }
+        
 
         // Need to implement option to set store
         // get_receiver().set_store(choice); 
@@ -84,7 +102,7 @@ class sellItemCommand extends Command {
         String type = types.get(rand.nextInt(types.size()));
         try {
             Item item = Item.generate_item(type);
-            get_receiver().sell_user_item(item, reader);
+            get_receiver().user_sells_item(item, reader);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -96,6 +114,6 @@ class buyItemCommand extends Command {
         set_receiver(receiver);
     }
     public void execute(Scanner reader) {
-        get_receiver().buy_user_item(reader);
+        get_receiver().user_buys_item(reader);
     }
 }

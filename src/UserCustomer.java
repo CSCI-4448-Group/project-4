@@ -20,7 +20,11 @@ public class UserCustomer {
         System.out.println("7. End interactions and leave the store\n");
     }
 
-    public void begin_options() {
+    public void set_receiver(Clerk receiver) {
+        receiver_ = receiver;
+    }
+
+    public void begin_options(Clerk north_clerk, Clerk south_clerk) {
         boolean running = true;
         Scanner reader = new Scanner(System.in);
         print_options();
@@ -47,7 +51,7 @@ public class UserCustomer {
                     print_options();
                     break;
                 case 1: 
-                    invoker_.set_slot(new selectStoreCommand(receiver_));
+                    invoker_.set_slot(new selectStoreCommand(receiver_, north_clerk, south_clerk, this));
                     invoker_.press_button(reader);
                     break;
                 case 2:

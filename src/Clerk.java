@@ -68,7 +68,7 @@ public class Clerk extends Employee implements Subject {
     public void arrive_at_store(){
         Store s = get_store();
         int currDay = get_store().get_calendar().get_current_day();
-        System.out.println(get_name() + " arrives at the store on Day " + currDay);
+        System.out.println(get_name() + " arrives at " + get_store().get_name() + " on Day " + currDay);
 
         // Observer pattern for logger
         announcement_ = get_name() + " arrives at the store on Day " + currDay;
@@ -334,7 +334,7 @@ public class Clerk extends Employee implements Subject {
         return choice.equals("y");
     }
 
-    public void sell_user_item(Item toBuyItem, Scanner reader) {
+    public void user_sells_item(Item toBuyItem, Scanner reader) {
         double purchPrice = evaluate_item(toBuyItem);
         if(get_store().is_discontinued(toBuyItem.get_item_type())){
             System.out.println("You tried to sell a " + toBuyItem.get_name() + " but the store no longer purchases these");
@@ -355,7 +355,7 @@ public class Clerk extends Employee implements Subject {
         }
     }
 
-    public void buy_user_item(Scanner reader) {
+    public void user_buys_item(Scanner reader) {
         ArrayList<String> item_types = Inventory.get_item_types();
         Random rand = new Random();
 
