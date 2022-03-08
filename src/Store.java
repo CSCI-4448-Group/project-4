@@ -99,6 +99,7 @@ public class Store {
     // Init calendar object
     public void initializeCalendar() {
         calendar_ = new Calendar();
+    
     }
 
     // Init ordered items hashmap
@@ -200,6 +201,8 @@ public class Store {
     public String get_name() {
         return name_;
     }
+
+    public GuitarKitFactory get_factory() {return kitFactory_;}
 
     public void set_name(String newName) {name_ = newName;}
 }
