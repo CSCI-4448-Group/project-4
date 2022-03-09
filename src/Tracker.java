@@ -51,7 +51,6 @@ public class Tracker implements Observer {
     public void print_daily_stats() {
         // Divide print statements
         System.out.println("===========================================");
-        System.out.println("===========================================");
         System.out.println("Tracker: Day " + (calendar.get_current_day() - 1));
         System.out.println("Clerk       Items Sold      Items Purchased     Items Damaged");
 
@@ -59,6 +58,7 @@ public class Tracker implements Observer {
         for (String n : trackerMap_.keySet()) {
             System.out.println(n + "          " + trackerMap_.get(n).get(0) + "                " + trackerMap_.get(n).get(1) + "                 " + trackerMap_.get(n).get(2));
         }
+        System.out.println("===========================================");
     }
 
     // Method implementation from observer interface
