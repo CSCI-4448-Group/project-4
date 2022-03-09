@@ -51,6 +51,7 @@ public class Tracker implements Observer {
     public void print_daily_stats() {
         // Divide print statements
         System.out.println("===========================================");
+        System.out.println("===========================================");
         System.out.println("Tracker: Day " + (calendar.get_current_day() - 1));
         System.out.println("Clerk       Items Sold      Items Purchased     Items Damaged");
 
