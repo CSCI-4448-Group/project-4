@@ -8,6 +8,7 @@ public class EmployeePool{
     private EmployeePool(){
         initializeEmployees();
     }
+    //Lazy instantiation
     public static EmployeePool getInstance() {
         if (instance == null) {
             instance = new EmployeePool();
@@ -25,12 +26,14 @@ public class EmployeePool{
         employees_.add(new Clerk("Fahad", null, new ElectronicTune()));
     }
 
+    //Reset days for all employees in emloyee pool
     public void reset_days(){
         for(Employee emp : employees_){
             emp.set_days_worked(0);
         }
     }
 
+    //Return all clerks in employee pool
     public ArrayList<Clerk> get_clerks() {
         ArrayList<Clerk> clerks = new ArrayList<Clerk>();
         for(Employee emp : employees_){
@@ -40,6 +43,8 @@ public class EmployeePool{
         }
         return clerks;
     }
+
+    //Return all clerks who have a current days_worked less than 3
     public ArrayList<Clerk> get_available_clerks() {
         ArrayList<Clerk> clerks = new ArrayList<Clerk>();
         for(Employee emp : employees_){
@@ -50,44 +55,34 @@ public class EmployeePool{
         return clerks;
     }
 
+    //@
     public ArrayList<Clerk> get_clerks_of_day(int numClerks, ArrayList<Store> stores) {
         Random rand = new Random();
-        int rand_num;
         ArrayList<Clerk> result = new ArrayList<>();
 
         // Modified from Bruce Montgomery's 'Spring22OOADProj2' example code in class.
         ArrayList<Clerk> clerks = get_available_clerks();
         while(result.size() < numClerks) {
-            rand_num = rand.nextInt(clerks.size());
-            Clerk clerk = clerks.get(rand_num);
-            int sick_chance = rand.nextInt(100);
-            System.out.println();
-            if (sick_chance >= 10) {
-                clerk.incr_days_worked();
-                result.add(clerk);
-                clerks.remove(clerk);
-            }
+            Clerk clerk = clerks.get(rand.nextInt(clerks.size())); //Get a random clerk
             // if they are not ok to work, set their days worked to 0 and get another clerk
-            else {
+            if(rand.nextInt(100) < 10){ //If the employee is sick
                 Clerk old_clerk = clerk;
-                for (Clerk other : clerks) {
+                for (Clerk other : clerks) { //Find another clerk
                     if (other != clerk) {
                         clerk = other;
                         break;
                     }
                 }
-                if (sick_chance < 10) {
-                    System.out.println(old_clerk.get_name() + " was sick, so " + clerk.get_name() + " covered for them.");
-                    old_clerk.set_days_worked(0);
-                }
-                clerk.incr_days_worked();
-                clerks.remove(clerk); //Remove the clerk who was selected to work
-                clerks.remove(old_clerk);
-                result.add(clerk);
+                System.out.println(old_clerk.get_name() + " was sick, so " + clerk.get_name() + " covered for them.");
+                old_clerk.set_days_worked(0);
+                clerks.remove(old_clerk); //Remove the sick clerk from consideration
             }
-            clerk.set_store(stores.get(result.size()-1));
+            clerk.incr_days_worked(); //Increment days_worked for the clerk
+            result.add(clerk); //Add the clerk to the return array
+            clerks.remove(clerk); //Remove clerk from consideration
+            clerk.set_store(stores.get(result.size()-1)); //Set the clerks store
         }
-        for(Clerk cl: get_clerks()){
+        for(Clerk cl: get_clerks()){ //Reset all the unchosen clerks days_worked to 0
             if(!result.contains(cl))
                 cl.set_days_worked(0);
         }
