@@ -1,20 +1,19 @@
-Logger wrote:  (FNMSNorth) Fahad arrives at the store on Day 18
-Logger wrote:  (FNMSNorth) 6 number of items arrived at the store on Day 18
-Logger wrote:  (FNMSNorth) Fahad is checking the register and there is $2638.86
+Logger wrote:  (FNMSNorth) Daphne arrives at the store on Day 18
+Logger wrote:  (FNMSNorth) Daphne is checking the register and there is $2212.42
 Logger wrote:  (FNMSNorth) The total number of items ordered is 3
-Logger wrote:  (FNMSNorth) The total number of items ordered is 3
-Logger wrote:  (FNMSNorth) The total number of items in the inventory is 56
-Logger wrote:  (FNMSNorth) The sum of today's inventory is $1227.10
+Logger wrote:  (FNMSNorth) The total number of items in the inventory is 42
+Logger wrote:  (FNMSNorth) The sum of today's inventory is $1152.20
 Logger wrote:  (FNMSNorth) The total number of items damaged in tuning is 0
-Logger wrote:  (FNMSNorth) The total number of items sold by Fahad on day 18 is 26
-Logger wrote:  (FNMSNorth) The total number of items bought by Fahad on day 18 is 15
-Logger wrote:  (FNMSNorth) Fahad locked up the store and went home for the day
+Logger wrote:  (FNMSNorth) The total number of items sold by Daphne on day 18 is 16
+Logger wrote:  (FNMSNorth) The total number of items bought by Daphne on day 18 is 9
+Logger wrote:  (FNMSNorth) The total number of items damaged in cleaning is 2
+Logger wrote:  (FNMSNorth) Daphne locked up the store and went home for the day
 Logger wrote:  (FNMSSouth) Velma arrives at the store on Day 18
-Logger wrote:  (FNMSSouth) 9 number of items arrived at the store on Day 18
-Logger wrote:  (FNMSSouth) Velma is checking the register and there is $2013.00
-Logger wrote:  (FNMSSouth) The total number of items in the inventory is 64
-Logger wrote:  (FNMSSouth) The sum of today's inventory is $1492.60
-Logger wrote:  (FNMSSouth) The total number of items damaged in tuning is 1
-Logger wrote:  (FNMSSouth) The total number of items sold by Velma on day 18 is 21
-Logger wrote:  (FNMSSouth) The total number of items bought by Velma on day 18 is 11
+Logger wrote:  (FNMSSouth) Velma is checking the register and there is $2121.42
+Logger wrote:  (FNMSSouth) The total number of items in the inventory is 45
+Logger wrote:  (FNMSSouth) The sum of today's inventory is $1154.20
+Logger wrote:  (FNMSSouth) The total number of items damaged in tuning is 0
+Logger wrote:  (FNMSSouth) The total number of items sold by Velma on day 18 is 16
+Logger wrote:  (FNMSSouth) The total number of items bought by Velma on day 18 is 7
+Logger wrote:  (FNMSSouth) The total number of items damaged in cleaning is 1
 Logger wrote:  (FNMSSouth) Velma locked up the store and went home for the day

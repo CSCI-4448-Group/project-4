@@ -1,20 +1,20 @@
 Logger wrote:  (FNMSNorth) James arrives at the store on Day 8
-Logger wrote:  (FNMSNorth) 12 number of items arrived at the store on Day 8
-Logger wrote:  (FNMSNorth) James is checking the register and there is $870.70
+Logger wrote:  (FNMSNorth) 9 number of items arrived at the store on Day 8
+Logger wrote:  (FNMSNorth) James is checking the register and there is $1774.30
 Logger wrote:  (FNMSNorth) The total number of items ordered is 3
-Logger wrote:  (FNMSNorth) The total number of items in the inventory is 63
-Logger wrote:  (FNMSNorth) The sum of today's inventory is $1589.20
-Logger wrote:  (FNMSNorth) The total number of items damaged in tuning is 3
-Logger wrote:  (FNMSNorth) The total number of items sold by James on day 8 is 5
-Logger wrote:  (FNMSNorth) The total number of items bought by James on day 8 is 1
+Logger wrote:  (FNMSNorth) The total number of items in the inventory is 48
+Logger wrote:  (FNMSNorth) The sum of today's inventory is $1022.90
+Logger wrote:  (FNMSNorth) The total number of items damaged in tuning is 1
+Logger wrote:  (FNMSNorth) The total number of items sold by James on day 8 is 14
+Logger wrote:  (FNMSNorth) The total number of items bought by James on day 8 is 7
+Logger wrote:  (FNMSNorth) The total number of items damaged in cleaning is 1
 Logger wrote:  (FNMSNorth) James locked up the store and went home for the day
 Logger wrote:  (FNMSSouth) Shaggy arrives at the store on Day 8
-Logger wrote:  (FNMSSouth) 12 number of items arrived at the store on Day 8
-Logger wrote:  (FNMSSouth) Shaggy is checking the register and there is $1399.50
-Logger wrote:  (FNMSSouth) The total number of items ordered is 3
-Logger wrote:  (FNMSSouth) The total number of items in the inventory is 71
-Logger wrote:  (FNMSSouth) The sum of today's inventory is $1709.60
-Logger wrote:  (FNMSSouth) The total number of items damaged in tuning is 0
-Logger wrote:  (FNMSSouth) The total number of items sold by Shaggy on day 8 is 9
-Logger wrote:  (FNMSSouth) The total number of items bought by Shaggy on day 8 is 9
+Logger wrote:  (FNMSSouth) 9 number of items arrived at the store on Day 8
+Logger wrote:  (FNMSSouth) Shaggy is checking the register and there is $1718.52
+Logger wrote:  (FNMSSouth) The total number of items in the inventory is 51
+Logger wrote:  (FNMSSouth) The sum of today's inventory is $1080.10
+Logger wrote:  (FNMSSouth) The total number of items damaged in tuning is 1
+Logger wrote:  (FNMSSouth) The total number of items sold by Shaggy on day 8 is 17
+Logger wrote:  (FNMSSouth) The total number of items bought by Shaggy on day 8 is 4
 Logger wrote:  (FNMSSouth) Shaggy locked up the store and went home for the day

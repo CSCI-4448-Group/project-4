@@ -1,17 +1,21 @@
-Logger wrote:  (FNMSNorth) James arrives at the store on Day 23
+Logger wrote:  (FNMSNorth) Bill arrives at the store on Day 23
 Logger wrote:  (FNMSNorth) 3 number of items arrived at the store on Day 23
-Logger wrote:  (FNMSNorth) James is checking the register and there is $2986.44
+Logger wrote:  (FNMSNorth) Bill is checking the register and there is $2607.04
 Logger wrote:  (FNMSNorth) The total number of items ordered is 3
 Logger wrote:  (FNMSNorth) The total number of items ordered is 3
-Logger wrote:  (FNMSNorth) The total number of items in the inventory is 55
-Logger wrote:  (FNMSNorth) The sum of today's inventory is $1346.30
-Logger wrote:  (FNMSNorth) The total number of items damaged in tuning is 0
-Logger wrote:  (FNMSSouth) Shaggy arrives at the store on Day 23
-Logger wrote:  (FNMSSouth) Shaggy is checking the register and there is $3018.64
-Logger wrote:  (FNMSSouth) The total number of items ordered is 3
-Logger wrote:  (FNMSSouth) The total number of items ordered is 3
-Logger wrote:  (FNMSSouth) The total number of items in the inventory is 55
-Logger wrote:  (FNMSSouth) The sum of today's inventory is $1346.30
-Logger wrote:  (FNMSSouth) The total number of items damaged in tuning is 1
-Logger wrote:  (FNMSNorth) James locked up the store and went home for the day
-Logger wrote:  (FNMSSouth) Shaggy locked up the store and went home for the day
+Logger wrote:  (FNMSNorth) The total number of items in the inventory is 34
+Logger wrote:  (FNMSNorth) The sum of today's inventory is $889.20
+Logger wrote:  (FNMSNorth) The total number of items damaged in tuning is 1
+Logger wrote:  (FNMSNorth) The total number of items sold by Bill on day 23 is 18
+Logger wrote:  (FNMSNorth) The total number of items bought by Bill on day 23 is 6
+Logger wrote:  (FNMSNorth) Bill locked up the store and went home for the day
+Logger wrote:  (FNMSSouth) Fahad arrives at the store on Day 23
+Logger wrote:  (FNMSSouth) 6 number of items arrived at the store on Day 23
+Logger wrote:  (FNMSSouth) Fahad is checking the register and there is $2943.24
+Logger wrote:  (FNMSSouth) The total number of items in the inventory is 39
+Logger wrote:  (FNMSSouth) The sum of today's inventory is $975.40
+Logger wrote:  (FNMSSouth) The total number of items damaged in tuning is 0
+Logger wrote:  (FNMSSouth) The total number of items sold by Fahad on day 23 is 38
+Logger wrote:  (FNMSSouth) The total number of items bought by Fahad on day 23 is 14
+Logger wrote:  (FNMSSouth) The total number of items damaged in cleaning is 8
+Logger wrote:  (FNMSSouth) Fahad locked up the store and went home for the day

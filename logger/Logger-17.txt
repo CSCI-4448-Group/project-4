@@ -1,22 +1,17 @@
-Logger wrote:  (FNMSNorth) Bill arrives at the store on Day 17
-Logger wrote:  (FNMSNorth) 3 number of items arrived at the store on Day 17
-Logger wrote:  (FNMSNorth) Bill is checking the register and there is $2271.56
-Logger wrote:  (FNMSNorth) The total number of items ordered is 3
-Logger wrote:  (FNMSNorth) The total number of items in the inventory is 55
-Logger wrote:  (FNMSNorth) The sum of today's inventory is $1327.30
+Logger wrote:  (FNMSNorth) Daphne arrives at the store on Day 17
+Logger wrote:  (FNMSNorth) Daphne is checking the register and there is $1964.42
+Logger wrote:  (FNMSNorth) The total number of items in the inventory is 46
+Logger wrote:  (FNMSNorth) The sum of today's inventory is $1249.20
 Logger wrote:  (FNMSNorth) The total number of items damaged in tuning is 0
-Logger wrote:  (FNMSNorth) The total number of items sold by Bill on day 17 is 32
-Logger wrote:  (FNMSNorth) The total number of items bought by Bill on day 17 is 14
-Logger wrote:  (FNMSNorth) The total number of items damaged in cleaning is 3
-Logger wrote:  (FNMSNorth) Bill locked up the store and went home for the day
-Logger wrote:  (FNMSSouth) James arrives at the store on Day 17
-Logger wrote:  (FNMSSouth) James is checking the register and there is $2166.90
-Logger wrote:  (FNMSSouth) The total number of items ordered is 3
-Logger wrote:  (FNMSSouth) The total number of items ordered is 3
-Logger wrote:  (FNMSSouth) The total number of items in the inventory is 49
-Logger wrote:  (FNMSSouth) The sum of today's inventory is $1093.60
-Logger wrote:  (FNMSSouth) The total number of items damaged in tuning is 1
-Logger wrote:  (FNMSSouth) The total number of items sold by James on day 17 is 18
-Logger wrote:  (FNMSSouth) The total number of items bought by James on day 17 is 10
-Logger wrote:  (FNMSSouth) The total number of items damaged in cleaning is 3
-Logger wrote:  (FNMSSouth) James locked up the store and went home for the day
+Logger wrote:  (FNMSNorth) The total number of items sold by Daphne on day 17 is 13
+Logger wrote:  (FNMSNorth) The total number of items bought by Daphne on day 17 is 8
+Logger wrote:  (FNMSNorth) Daphne locked up the store and went home for the day
+Logger wrote:  (FNMSSouth) Bill arrives at the store on Day 17
+Logger wrote:  (FNMSSouth) 3 number of items arrived at the store on Day 17
+Logger wrote:  (FNMSSouth) Bill is checking the register and there is $2072.62
+Logger wrote:  (FNMSSouth) The total number of items in the inventory is 47
+Logger wrote:  (FNMSSouth) The sum of today's inventory is $1179.20
+Logger wrote:  (FNMSSouth) The total number of items damaged in tuning is 0
+Logger wrote:  (FNMSSouth) The total number of items sold by Bill on day 17 is 13
+Logger wrote:  (FNMSSouth) The total number of items bought by Bill on day 17 is 3
+Logger wrote:  (FNMSSouth) Bill locked up the store and went home for the day
