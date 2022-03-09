@@ -1,23 +1,20 @@
-Logger wrote:  (FNMSNorth) Velma arrives at the store on Day 6
-Logger wrote:  (FNMSNorth) Velma is checking the register and there is $918.40
-Logger wrote:  (FNMSNorth) The total number of items ordered is 3
-Logger wrote:  (FNMSNorth) The total number of items ordered is 3
-Logger wrote:  (FNMSNorth) The total number of items in the inventory is 51
-Logger wrote:  (FNMSNorth) The sum of today's inventory is $1216.70
+Logger wrote:  (FNMSNorth) Fahad arrives at the store on Day 6
+Logger wrote:  (FNMSNorth) 3 number of items arrived at the store on Day 6
+Logger wrote:  (FNMSNorth) Fahad is checking the register and there is $1489.30
+Logger wrote:  (FNMSNorth) The total number of items in the inventory is 46
+Logger wrote:  (FNMSNorth) The sum of today's inventory is $967.90
 Logger wrote:  (FNMSNorth) The total number of items damaged in tuning is 0
-Logger wrote:  (FNMSNorth) The total number of items sold by Velma on day 6 is 13
-Logger wrote:  (FNMSNorth) The total number of items bought by Velma on day 6 is 6
-Logger wrote:  (FNMSNorth) The total number of items damaged in cleaning is 1
-Logger wrote:  (FNMSNorth) Velma locked up the store and went home for the day
-Logger wrote:  (FNMSSouth) Fahad arrives at the store on Day 6
-Logger wrote:  (FNMSSouth) 3 number of items arrived at the store on Day 6
-Logger wrote:  (FNMSSouth) Fahad is checking the register and there is $1499.90
+Logger wrote:  (FNMSNorth) The total number of items sold by Fahad on day 6 is 22
+Logger wrote:  (FNMSNorth) The total number of items bought by Fahad on day 6 is 5
+Logger wrote:  (FNMSNorth) The total number of items damaged in cleaning is 3
+Logger wrote:  (FNMSNorth) Fahad locked up the store and went home for the day
+Logger wrote:  (FNMSSouth) Velma arrives at the store on Day 6
+Logger wrote:  (FNMSSouth) 6 number of items arrived at the store on Day 6
+Logger wrote:  (FNMSSouth) Velma is checking the register and there is $1854.72
 Logger wrote:  (FNMSSouth) The total number of items ordered is 3
-Logger wrote:  (FNMSSouth) The total number of items ordered is 3
-Logger wrote:  (FNMSSouth) The total number of items ordered is 3
-Logger wrote:  (FNMSSouth) The total number of items in the inventory is 52
-Logger wrote:  (FNMSSouth) The sum of today's inventory is $1265.40
+Logger wrote:  (FNMSSouth) The total number of items in the inventory is 41
+Logger wrote:  (FNMSSouth) The sum of today's inventory is $768.10
 Logger wrote:  (FNMSSouth) The total number of items damaged in tuning is 0
-Logger wrote:  (FNMSSouth) The total number of items sold by Fahad on day 6 is 13
-Logger wrote:  (FNMSSouth) The total number of items bought by Fahad on day 6 is 9
-Logger wrote:  (FNMSSouth) Fahad locked up the store and went home for the day
+Logger wrote:  (FNMSSouth) The total number of items sold by Velma on day 6 is 3
+Logger wrote:  (FNMSSouth) The total number of items bought by Velma on day 6 is 4
+Logger wrote:  (FNMSSouth) Velma locked up the store and went home for the day

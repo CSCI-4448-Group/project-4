@@ -5,7 +5,7 @@ import java.io.IOException;  // Import the IOException class to handle errors
 
 
 public class Logger implements Observer {
-    // Singleton instance of tracker
+    // Singleton instance of Logger. Eager instantiation
     private static Logger loggerInstance = new Logger();
     private String announcement_; // Logger has an announcement String attribute (used to store incoming announcement
     private int currDay; // Track the current day

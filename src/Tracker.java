@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Tracker implements Observer {
-    // Singleton instance of tracker
+    // Singleton instance of tracker. Lazy instantiation
     private static Tracker trackerInstance = null;
     private HashMap<String, ArrayList<Integer>> trackerMap_ = new HashMap<>(); // Define data structure to store relevant clerk information
     private Calendar calendar; // Calendar attribute for tracking

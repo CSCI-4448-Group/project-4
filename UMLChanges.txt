@@ -1,7 +1,5 @@
-UML Changes Project 3
+UML Changes Project 4
 
-1. Updated observer class to work for data sent to both Tracker and Logger
-2. Updated decorator classes for Stringed instruments
-3. Updated strategy pattern tuning behaviors and Clerk behavior methods
-4. Broke up procedural code for Clerk algorithms such as open_store and clean_store
-5. Updated Clerk attributes to work with observer and strategy pattern
+1. Updated singleton for lazy and eager instantiation of tracker and logger respectively
+2. Updated abstract factory with relevant methods for each guitar kit item and North side, South side factory
+3. Updated command pattern with public methods from implementation and updated specific display method

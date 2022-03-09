@@ -1,19 +1,21 @@
-Logger wrote:  (FNMSNorth) Velma arrives at the store on Day 16
-Logger wrote:  (FNMSNorth) Velma is checking the register and there is $2185.46
-Logger wrote:  (FNMSNorth) The total number of items ordered is 3
-Logger wrote:  (FNMSNorth) The total number of items in the inventory is 55
-Logger wrote:  (FNMSNorth) The sum of today's inventory is $1298.70
+Logger wrote:  (FNMSNorth) Fahad arrives at the store on Day 16
+Logger wrote:  (FNMSNorth) Fahad is checking the register and there is $1993.42
+Logger wrote:  (FNMSNorth) The total number of items in the inventory is 46
+Logger wrote:  (FNMSNorth) The sum of today's inventory is $1218.20
 Logger wrote:  (FNMSNorth) The total number of items damaged in tuning is 0
-Logger wrote:  (FNMSNorth) The total number of items sold by Velma on day 16 is 17
-Logger wrote:  (FNMSNorth) The total number of items bought by Velma on day 16 is 8
-Logger wrote:  (FNMSNorth) Velma locked up the store and went home for the day
+Logger wrote:  (FNMSNorth) The total number of items sold by Fahad on day 16 is 28
+Logger wrote:  (FNMSNorth) The total number of items bought by Fahad on day 16 is 10
+Logger wrote:  (FNMSNorth) The total number of items damaged in cleaning is 5
+Logger wrote:  (FNMSNorth) Fahad locked up the store and went home for the day
 Logger wrote:  (FNMSSouth) Shaggy arrives at the store on Day 16
 Logger wrote:  (FNMSSouth) 3 number of items arrived at the store on Day 16
-Logger wrote:  (FNMSSouth) Shaggy is checking the register and there is $2069.50
+Logger wrote:  (FNMSSouth) Shaggy is checking the register and there is $2276.52
 Logger wrote:  (FNMSSouth) The total number of items ordered is 3
-Logger wrote:  (FNMSSouth) The total number of items in the inventory is 54
-Logger wrote:  (FNMSSouth) The sum of today's inventory is $1324.70
+Logger wrote:  (FNMSSouth) The total number of items ordered is 3
+Logger wrote:  (FNMSSouth) The total number of items in the inventory is 43
+Logger wrote:  (FNMSSouth) The sum of today's inventory is $1046.50
 Logger wrote:  (FNMSSouth) The total number of items damaged in tuning is 2
-Logger wrote:  (FNMSSouth) The total number of items sold by Shaggy on day 16 is 18
+Logger wrote:  (FNMSSouth) The total number of items sold by Shaggy on day 16 is 28
 Logger wrote:  (FNMSSouth) The total number of items bought by Shaggy on day 16 is 11
+Logger wrote:  (FNMSSouth) The total number of items damaged in cleaning is 4
 Logger wrote:  (FNMSSouth) Shaggy locked up the store and went home for the day
