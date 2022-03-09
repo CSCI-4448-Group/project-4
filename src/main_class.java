@@ -2,13 +2,13 @@ import java.util.Random;
 import java.util.ArrayList;
 class main_class {
 
-    public static void begin_day(Store fnms, Clerk current_clerk, Tracker tracker, boolean userCommandDay) throws Exception
+    public static void run_day(Store fnms, Clerk current_clerk) throws Exception
     {
-        Logger loggerGuy;
-        loggerGuy = Logger.getInstance();
-        loggerGuy.Logger_set(fnms, current_clerk);
+        //Set logger to track current store and current clerk
+        Logger.getInstance().Logger_set(fnms,current_clerk);
 
-        tracker.registerClerk(current_clerk);
+        //Set Tracker to track current store and current clerk
+        Tracker.getInstance(fnms).registerClerk(current_clerk);
 
         // Clerk arrives at store
         current_clerk.arrive_at_store();
@@ -29,13 +29,12 @@ class main_class {
         current_clerk.leave_store();
     }
 
-    public static void begin_user_day(Store FNMSNorth, Store FNMSSouth, Clerk north_clerk, Clerk south_clerk,Tracker tracker) throws Exception
+    public static void begin_user_day(Store FNMSNorth, Store FNMSSouth, Clerk north_clerk, Clerk south_clerk) throws Exception
     {
-        Logger loggerGuy;
-        loggerGuy = Logger.getInstance();
-        loggerGuy.Logger_set(FNMSNorth, north_clerk);
+        Logger.getInstance().Logger_set(FNMSNorth, north_clerk);
 
-        tracker.registerClerk(north_clerk);
+
+        Tracker.getInstance(FNMSNorth).registerClerk(north_clerk);
 
         // Clerk arrives at store
         north_clerk.arrive_at_store();
@@ -46,9 +45,9 @@ class main_class {
         // Clerk checks inventory, places orders for new items if none are present in the store
         north_clerk.do_inventory();
 
-        loggerGuy.Logger_set(FNMSSouth, south_clerk);
+        Logger.getInstance().Logger_set(FNMSSouth, south_clerk);
 
-        tracker.registerClerk(south_clerk);
+        Tracker.getInstance(FNMSSouth).registerClerk(south_clerk);
 
         // Clerk arrives at store
         south_clerk.arrive_at_store();
@@ -132,10 +131,6 @@ class main_class {
      }
 
     public static void runFnmsSimulation() throws Exception {
-        Random rand = new Random();
-        int randomDay = 10 + rand.nextInt(20);
-        if (randomDay % 7 == 0) {randomDay++;}
-
         // Initialize store and two clerk objects
         EmployeePool empPool = EmployeePool.getInstance();
         Store FNMSNorth = new Store("FNMSNorth", new NorthGuitarKitFactory());
@@ -146,9 +141,10 @@ class main_class {
         stores.add(FNMSNorth);
         stores.add(FNMSSouth);
 
-        Tracker tracker;
-
-
+        //Set the random user_customer day
+        Random rand = new Random();
+        int randomDay = 10 + rand.nextInt(20);
+        if (randomDay % 7 == 0) {randomDay++;}
         // Main program loop
         // Run loop for 30 days, calling begin_day each time, and print out a delineator between each day.
         for (int i = 0; i < 30; i++)
@@ -163,13 +159,11 @@ class main_class {
                 empPool.reset_days();
             } else {
                 ArrayList<Clerk> chosenClerks = empPool.get_clerks_of_day(2,stores);
-                tracker = Tracker.getInstance(FNMSNorth);
                 if (randomDay == FNMSNorth.get_calendar().get_current_day()) {
-                    begin_user_day(FNMSNorth, FNMSSouth, chosenClerks.get(0), chosenClerks.get(1), tracker);
+                    begin_user_day(FNMSNorth, FNMSSouth, chosenClerks.get(0), chosenClerks.get(1));
                 } else {
-                    begin_day(FNMSNorth, chosenClerks.get(0), tracker, FNMSNorth.get_calendar().get_current_day() == randomDay);
-                    // tracker = Tracker.getInstance(FNMSSouth);
-                    begin_day(FNMSSouth, chosenClerks.get(1), tracker, FNMSSouth.get_calendar().get_current_day() == randomDay);    
+                    run_day(FNMSNorth, chosenClerks.get(0));
+                    run_day(FNMSSouth, chosenClerks.get(1));
                 }
             }
 

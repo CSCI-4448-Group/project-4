@@ -58,6 +58,7 @@ public class Tracker implements Observer {
         for (String n : trackerMap_.keySet()) {
             System.out.println(n + "          " + trackerMap_.get(n).get(0) + "                " + trackerMap_.get(n).get(1) + "                 " + trackerMap_.get(n).get(2));
         }
+        System.out.println("===========================================");
     }
 
     // Method implementation from observer interface
